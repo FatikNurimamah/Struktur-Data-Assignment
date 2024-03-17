@@ -179,11 +179,134 @@ Deskripsi Program : Program di atas merupakan program C++ yang menginisialisasi 
 ### 2. [Buatlah program Input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!]
 
 ```C++
+#include <iostream>
 
+using namespace std;
 
+int main() {
+    int x_ukuran, y_ukuran, z_ukuran;
+
+    // Meminta pengguna untuk memasukkan ukuran array
+    cout << "Masukkan ukuran array (x y z): ";
+    cin >> x_ukuran >> y_ukuran >> z_ukuran;
+
+    // Deklarasi array dengan ukuran yang dimasukkan pengguna
+    int arr[x_ukuran][y_ukuran][z_ukuran];
+
+    // Input elemen array
+    for (int x = 0; x < x_ukuran; ++x) {
+        for (int y = 0; y < y_ukuran; ++y) {
+            for (int z = 0; z < z_ukuran; ++z) {
+                cout << "Input Array[" << x << "][" << y << "][" << z << "]: ";
+                cin >> arr[x][y][z];
+            }
+        }
+        cout << endl;
+    }
+
+    // Output array
+    cout << "Elemen-elemen array:" << endl;
+    for (int x = 0; x < x_ukuran; ++x) {
+        for (int y = 0; y < y_ukuran; ++y) {
+            for (int z = 0; z < z_ukuran; ++z) {
+                cout << "Array[" << x << "][" << y << "][" << z << "]: " << arr[x][y][z] << endl;
+            }
+        }
+    }
+    cout << endl;
+// tampilan array
+    for (int x = 0; x < x_ukuran; x++)
+    {
+        for (int y = 0; y < y_ukuran; y++)
+        {
+            for (int z = 0; z < z_ukuran; z++)
+            {
+                cout << arr[x][y][z] << ends;
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+```
+#### Output:
+![Screenshot 2024-03-17 205010](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/e0dce9b1-9a85-4d41-9dd6-1fbcad753932)
+![Screenshot 2024-03-17 205150](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/84a87d0b-eeb0-4ff8-80de-a112cf589863)
+
+Deskripsi Program : Program ini merupakan program C++ yang memungkinkan pengguna memasukkan input array tiga dimensi (x, y, z) dan ukuran elemennya. Program ini memungkinkan pengguna untuk dengan mudah mengelola array tiga dimensi dan menampilkan elemennya secara terstruktur.
+ 
+#### Full code Screenshot:
+![Screenshot 2024-03-17 210613](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/3285a925-482f-4098-9c1b-067bfb2b2525)
+
+### 3. [Buatlah program menu untuk mencari nilai Maksimum, Minimum dan Nilai rata – rata dari suatu array dengan input yang dimasukan oleh user!]
+
+```C++
+#include <iostream>
+#include <climits>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    int n;
+
+    // Meminta pengguna untuk memasukkan ukuran array
+    cout << "Masukkan jumlah array: ";
+    cin >> n;
+
+    // Deklarasi array dengan ukuran yang dimasukkan pengguna
+    int arr[n];
+
+    // Input elemen array
+    cout << "Masukkan elemen-elemen array:" << endl;
+    for (int i = 0; i < n; ++i) {
+        cout << "Array ke-" << i + 1 << ": ";
+        cin >> arr[i];
+    }
+
+    // Mencari nilai maksimum, minimum, dan rata-rata
+    int max_arr = INT_MIN;
+    int min_arr = INT_MAX;
+    int mean = 0;
+    for (int i = 0; i < n; ++i) {
+        if (arr[i] > max_arr) {
+            max_arr = arr[i];
+        }
+        if (arr[i] < min_arr) {
+            min_arr = arr[i];
+        }
+        mean += arr[i];
+    }
+    double average = static_cast<double>(mean) / n;
+
+    // Menampilkan nilai maksimum, minimum, dan rata-rata
+    cout << "\nNilai maksimum: " << max_arr << endl;
+    cout << "Nilai minimum: " << min_arr << endl;
+    cout << "Nilai rata-rata: " << fixed << setprecision(2) << average << endl;
+
+    return 0;
+}
+```
+#### Output:
+![Screenshot 2024-03-17 211940](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/5a5e7dbc-2ad5-4377-a909-48471dc1923e)
+
+Deskripsi Program : Program ini merupakan program C++ yang meminta pengguna untuk menginputkan elemen-elemen  array dan kemudian akan dicari nilai maksimum, minimum, dan rata-rata dari array tersebut.
+
+#### Full code Screenshot:
+![Screenshot 2024-03-17 212518](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/d4549999-9916-4d4f-9870-bd330a3e897d)
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+kesimpulan yang dapat saya ambil adalah :
+Array adalah struktur data untuk menyimpan kumpulan nilai dari tipe data yang sama.
+
+Ada tiga jenis array: 
+   1. Array satu dimensi: elemen disusun dalam baris dan diakses melalui satu indeks.
+   2. Array dua dimensi: elemen disusun dalam matriks dan dapat diakses melalui dua indeks (baris dan kolom).
+   3. Array multidimensi: Array dengan tiga dimensi atau lebih yang digunakan untuk struktur data  kompleks.
+
+Array memungkinkan pengelolaan data yang efisien dan berguna untuk pemrograman perulangan, pengurutan, pencarian, dan operasi data lainnya. Array juga merupakan alat yang sangat penting dalam pemrograman karena memungkinkan pengguna untuk mengatur dan mengakses data secara efisien, terutama ketika berhadapan dengan data dalam jumlah  besar atau  struktur data  kompleks seperti matriks.
 
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
+[1] https://dosenit.com/kuliah-it/array

@@ -1,5 +1,5 @@
 # <h1 align="center">Laporan Praktikum Modul Array</h1>
-<p align="center">Fatik Nurimamah (231102190)</p>
+<p align="center">Fatik Nurimamah (2311102190)</p>
 
 ## Dasar Teori
 

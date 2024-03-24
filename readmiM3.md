@@ -6,36 +6,20 @@ a) Single Linked List
 
 Single Linked List Adalah sebuah LL yang menggunakan sebuah variabel pointer saja untuk menyimpan banyak data dengan metode LL, suatu daftar isi yang saling berhubungan[1]. 
 
-1.  Single LinkedList Non Circular
+1.  Single Linked List Non Circular
    
     Setiap  node  pada  linked  list  mempunyai field yang berisi data dan pointer ke node berikutnya & ke node sebelumnya. Untuk pembentukan node baru, mulanya pointer next dan prev  akan  menunjuk  ke  nilai  NULL. Selanjutnya pointer  prev  akan  menunjuk  ke  node  sebelumnya, dan pointer next akan menunjuk ke node selanjutnya pada list[1].
 2.  Single Linked list Circular
   
     Single Linked List yang pointer nextnya menunjuk pada dirinya sendiri. Jika Single Linked List tersebut terdiri dari beberapa node, maka pointer next pada node terakhir akan menunjuk ke node terdepannya[1].
 
-Pembentukan linked list tunggal memerlukan :
-1. deklarasi tipe simpul
-2. deklarasi variabel pointer penunjuk awal Linked list
-3. pembentukan simpul baru
-4. pengaitan simpul baru ke Linked list yang telah terbentuk
-
-Ada beberapa operasi yang dapat dibuat pada senarai tersebut, diantaranya:
-tambah, hapus dan edit dari senarai tersebut[2].
-
 b) Double Linked List
 
-Pada dasarnya, penggunaan Double Linked List hampir sama dengan penggunaan Single Linked List. Hanya saja Double Linked List menerapkan sebuah pointer baru, yaitu prev, yang digunakan untuk menggeser mundur selain tetap mempertahankan pointer next. Adanya keberadaan 2 pointer penunjuk (next dan prev) menjadikan Double
-Linked List menjadi lebih fleksibel dibandingkan Single Linked List, namun dengan mengorbankan adanya memori tambahan dengan adanya pointer tambahan tersebut[2].
+Pada dasarnya, penggunaan Double Linked List hampir sama dengan penggunaan Single Linked List. Hanya saja Double Linked List menerapkan sebuah pointer baru, yaitu prev, yang digunakan untuk menggeser mundur selain tetap mempertahankan pointer next[2].
 
-Ada 2 jenis Double Linked List, yaitu: Double Linked List Non Circular dan Double Linked List Circular.
+Double Linked List Circular
 
-A. Double Linked List Non Circular
-
-DLLNC adalah sebuah Linked List yang terdiri dari dua arah pointer, dengan node yang saling terhubung, namun kedua pointernya menunjuk ke NULL. Setiap node pada linked list mempunyai field yang berisi data dan pointer yang saling berhubungan dengan node yang lainnya[2].
-
-B. Double Linked List Circular
-
-Double Linked List Circular adalah linked list dengan menggunakan pointer, dimana setiap node memiliki 3 field, yaitu 1 field pointer yang menunjuk pointer berikutnya (next), 1 field menunjuk pointer sebelumnya (prev), serta sebuah field yang berisi data untuk node tersebut[1].
+Double linked list dengan menggunakan  pointer, dimana setiap node memiliki 3 field, yaitu 1 field pointer yang menunjuk pointer berikutnya (next), 1 field menunjuk pointer sebelumnya (prev), serta sebuah field yang  berisi data untuk node tersebut. Double Linked List   Circular pointer next dan prev-nya menunjuk ke dirinya sendiri secara circular[2].
 
 ## Guided 
 
@@ -489,16 +473,158 @@ Deskripsi Program: Kode ini merupakan implementasi  program yang menggunakan str
 
 ## Unguided 
 
-### 1. [Soal]
+### 1. [Buatlah program menu Single Linked List Non-Circular untuk menyimpan Nama dan usia mahasiswa, dengan menggunakan inputan dari user. Lakukan operasi berikut:]
+![Screenshot 2024-03-24 145307](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/240c8c16-8e3a-4402-9ad0-64c9e99a8413)
+
 
 ```C++
 #include <iostream>
 using namespace std;
 
+// Deklarasi Struct Node
+struct Node {
+    string nama;
+    int usia;
+    Node* next;
+};
+
+// Deklarasi Kelas SingleLinkedList
+class SingleLinkedList {
+public:
+    Node* head;
+    SingleLinkedList() {
+        head = nullptr;
+    }
+
+    // Fungsi untuk menambah data di depan linked list
+    void insertDepan(string nama, int usia) {
+        Node* newNode = new Node;
+        newNode->nama = nama;
+        newNode->usia = usia;
+        newNode->next = head;
+        head = newNode;
+    }
+
+    // Fungsi untuk menambah data di belakang linked list
+    void insertBelakang(string nama, int usia) {
+        Node* newNode = new Node;
+        newNode->nama = nama;
+        newNode->usia = usia;
+        newNode->next = nullptr;
+        if (head == nullptr) {
+            head = newNode;
+            return;
+        }
+        Node* temp = head;
+        while (temp->next != nullptr) {
+            temp = temp->next;
+        }
+        temp->next = newNode;
+    }
+
+    // Fungsi untuk menambah data di tengah linked list
+    void insertTengah(string nama, int usia, string namaSebelumnya) {
+        Node* newNode = new Node;
+        newNode->nama = nama;
+        newNode->usia = usia;
+        Node* temp = head;
+        while (temp != nullptr && temp->nama != namaSebelumnya) {
+            temp = temp->next;
+        }
+        if (temp == nullptr) {
+            cout << "Data " << namaSebelumnya << " tidak ditemukan!" << endl;
+            return;
+        }
+        newNode->next = temp->next;
+        temp->next = newNode;
+    }
+
+    // Fungsi untuk menghapus data berdasarkan nama
+    void DeleteData(string nama) {
+        Node* temp = head;
+        Node* prev = nullptr;
+        if (temp != nullptr && temp->nama == nama) {
+            head = temp->next;
+            delete temp;
+            return;
+        }
+        while (temp != nullptr && temp->nama != nama) {
+            prev = temp;
+            temp = temp->next;
+        }
+        if (temp == nullptr) {
+            cout << "Data " << nama << " tidak ditemukan!" << endl;
+            return;
+        }
+        prev->next = temp->next;
+        delete temp;
+    }
+
+    // Fungsi untuk mengubah data berdasarkan nama
+    void ChangeData(string nama, string NewName, int NewAge) {
+        Node* temp = head;
+        while (temp != nullptr && temp->nama != nama) {
+            temp = temp->next;
+        }
+        if (temp == nullptr) {
+            cout << "Data " << nama << " tidak ditemukan!" << endl;
+            return;
+        }
+        temp->nama = NewName;
+        temp->usia = NewAge;
+    }
+
+    // Fungsi untuk menampilkan seluruh data
+    void ShowData() {
+        Node* temp = head;
+        while (temp != nullptr) {
+            cout << temp->nama << " " << temp->usia << endl;
+            temp = temp->next;
+        }
+    }
+};
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    // Inisialisasi SingleLinkedList
+    SingleLinkedList list;
+
+    // Data pertama (nama dan usia Anda)
+    string namaAnda;
+    int usiaAnda;
+    cout << "Masukkan Nama Anda: ";
+    cin >> namaAnda;
+    cout << "Masukkan Usia Anda: ";
+    cin >> usiaAnda;
+    list.insertDepan(namaAnda, usiaAnda);
+
+    // Data-data lain sesuai permintaan
+    list.insertBelakang("John", 19);
+    list.insertBelakang("Jane", 20);
+    list.insertBelakang("Michael", 18);
+    list.insertBelakang("Yusuke", 19);
+    list.insertBelakang("Akechi", 20);
+    list.insertBelakang("Hoshino", 18);
+    list.insertBelakang("Karin", 18);
+
+    // Hapus data Akechi
+    list.DeleteData("Akechi");
+
+    // Tambahkan data Futaba di antara John dan Jane
+    list.insertTengah("Futaba", 18, "John");
+
+    // Tambahkan data Igor di awal
+    list.insertDepan("Igor", 20);
+
+    // Ubah data Michael menjadi Reyn 18
+    list.ChangeData("Michael", "Reyn", 18);
+
+    // Tampilkan seluruh data
+    cout << "Seluruh data:" << endl;
+    list.ShowData();
+
     return 0;
 }
+
 ```
 #### Output:
 ![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
@@ -515,4 +641,4 @@ Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran
 ## Referensi
 [1] Arraffi, Adzriel. "PENGERTIAN LINIER DALAM STRUKTUR DATA MAJEMUK." (2019).
 
-[2] Triase, Triase. "Struktur Data: Diktat Edisi Revisi." (2020).
+[2] Nugraha, Aria Sakti. "Artikel Double Linked List Circulate." (2019).

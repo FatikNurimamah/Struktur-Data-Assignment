@@ -4,22 +4,41 @@
 ## Dasar Teori
 a) Single Linked List
 
-Single Linked List Adalah sebuah LL yang menggunakan sebuah variabel pointer saja untuk menyimpan banyak data dengan metode LL, suatu daftar isi yang saling berhubungan[1]. 
+Single Linked List Adalah sebuah LL yang menggunakan sebuah variabel pointer yang menghubungkan setiap node (satu arah “next”)[1]. Perhatikan ilustrasi dibawah ini!
+
+![Screenshot 2024-03-25 204139](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/986bc3af-054a-4cfc-bb7e-222abedca61c)
+
 
 1.  Single Linked List Non Circular
    
     Setiap  node  pada  linked  list  mempunyai field yang berisi data dan pointer ke node berikutnya & ke node sebelumnya. Untuk pembentukan node baru, mulanya pointer next dan prev  akan  menunjuk  ke  nilai  NULL. Selanjutnya pointer  prev  akan  menunjuk  ke  node  sebelumnya, dan pointer next akan menunjuk ke node selanjutnya pada list[1].
-2.  Single Linked list Circular
+
+   
+3.  Single Linked list Circular
   
-    Single Linked List yang pointer nextnya menunjuk pada dirinya sendiri. Jika Single Linked List tersebut terdiri dari beberapa node, maka pointer next pada node terakhir akan menunjuk ke node terdepannya[1].
+    Single Linked List yang pointer nextnya menunjuk pada dirinya sendiri. Dimana pada node terakhir atau tail yang semula menunjukkan NULL diganti dengan menunjuk ke kepala atau head[1]. Dari pengertian tersebut, perhatikanlah ilustrasi dibawah ini!
+
+![Screenshot 2024-03-25 201239](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/9c67fe26-2c0a-4349-a88c-c0113f0f066c)
+
 
 b) Double Linked List
 
 Pada dasarnya, penggunaan Double Linked List hampir sama dengan penggunaan Single Linked List. Hanya saja Double Linked List menerapkan sebuah pointer baru, yaitu prev, yang digunakan untuk menggeser mundur selain tetap mempertahankan pointer next[2].
 
+![Screenshot 2024-03-25 195321](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/de4c35e4-5f6d-4093-b538-825af86e0c4a)
+
 Double Linked List Circular
 
 Double linked list dengan menggunakan  pointer, dimana setiap node memiliki 3 field, yaitu 1 field pointer yang menunjuk pointer berikutnya (next), 1 field menunjuk pointer sebelumnya (prev), serta sebuah field yang  berisi data untuk node tersebut. Double Linked List   Circular pointer next dan prev-nya menunjuk ke dirinya sendiri secara circular[2].
+
+![Screenshot 2024-03-25 193105](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/1d52e82d-e9e8-45ff-ae92-bbefcb8e717c)
+
+a. Setiap  node  pada  linked  list mempunyai field yang berisi data dan pointer ke node berikutnya dan ke node sebelumnya[2].
+
+b. Untuk   pembentukan   node baru, mulanya pointer next dan prev  akan  menunjuk  ke  dirinya sendiri[2].
+
+c. Jika   sudah   lebih   dari   satu node,  maka  pointer  prev  akan menunjuk ke node sebelumnya, dan pointer next akan menunjuk ke 
+    node sesudahnya[2].
 
 ## Guided 
 

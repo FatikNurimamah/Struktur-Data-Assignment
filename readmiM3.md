@@ -8,22 +8,16 @@ Single Linked List Adalah sebuah LL yang menggunakan sebuah variabel pointer yan
 
 ![Screenshot 2024-03-25 204139](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/986bc3af-054a-4cfc-bb7e-222abedca61c)
 
-
-1.  Single Linked List Non Circular
-   
-    Setiap  node  pada  linked  list  mempunyai field yang berisi data dan pointer ke node berikutnya & ke node sebelumnya. Untuk pembentukan node baru, mulanya pointer next dan prev  akan  menunjuk  ke  nilai  NULL. Selanjutnya pointer  prev  akan  menunjuk  ke  node  sebelumnya, dan pointer next akan menunjuk ke node selanjutnya pada list[1].
-
-   
-3.  Single Linked list Circular
+Single Linked list Circular
   
-    Single Linked List yang pointer nextnya menunjuk pada dirinya sendiri. Dimana pada node terakhir atau tail yang semula menunjukkan NULL diganti dengan menunjuk ke kepala atau head[1]. Dari pengertian tersebut, perhatikanlah ilustrasi dibawah ini!
+Single Linked List yang pointer nextnya menunjuk pada dirinya sendiri. Dimana pada node terakhir atau tail yang semula menunjukkan NULL diganti dengan menunjuk ke kepala atau head dengan demikian pada intinya tail akan selalu terhubung dengan head. [1]. Dari pengertian tersebut, perhatikanlah ilustrasi dibawah ini!
 
 ![Screenshot 2024-03-25 201239](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/9c67fe26-2c0a-4349-a88c-c0113f0f066c)
 
 
 b) Double Linked List
 
-Pada dasarnya, penggunaan Double Linked List hampir sama dengan penggunaan Single Linked List. Hanya saja Double Linked List menerapkan sebuah pointer baru, yaitu prev, yang digunakan untuk menggeser mundur selain tetap mempertahankan pointer next[2].
+Pada dasarnya, penggunaan Double Linked List hampir sama dengan penggunaan Single Linked List. Hanya saja Double Linked List menerapkan sebuah pointer baru, yaitu prev, yang digunakan untuk menggeser mundur selain tetap mempertahankan pointer next[2]. 
 
 ![Screenshot 2024-03-25 195321](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/de4c35e4-5f6d-4093-b538-825af86e0c4a)
 
@@ -648,14 +642,269 @@ int main() {
 #### Output:
 ![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Deskripsi Program: Program tersebut adalah contoh implementasi struktur data linked list dalam C++ yang digunakan untuk menyimpan informasi tentang seseorang (nama dan umur). Program ini menggunakan linked list karena pengguna akan memiliki keleluasaan untuk menambah dan menghapus data tanpa  memindahkan data lainnya, serta program ini memberikan contoh penggunaan linked list dalam menyimpan dan mengelola data secara dinamis.
 
-#### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
+
+### 1. [Modifikasi Guided Double Linked List dilakukan dengan penambahan operasi untuk menambah data, menghapus, dan update di tengah / di urutan tertentu yang diminta. Selain itu, buatlah agar tampilannya menampilkan Nama produk dan harga.]
+![Screenshot 2024-03-25 220414](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/c9238919-ae3d-4e81-a542-f5df1e413708)
+![Screenshot 2024-03-25 220521](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/9117a86c-655a-469c-b031-56bdad1e8463)
+
+```C++
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+using namespace std;
+
+// Deklarasi Struct Node
+struct Node {
+    string nama;
+    int harga;
+    Node* prev;
+    Node* next;
+};
+
+// Deklarasi Kelas DoubleLinkedList
+class DoubleLinkedList {
+public:
+    Node* head;
+    Node* tail;
+    DoubleLinkedList() {
+        head = nullptr;
+        tail = nullptr;
+    }
+
+    // Fungsi untuk menambah data di belakang linked list
+    void insertBelakang(string nama, int harga) {
+        Node* newNode = new Node;
+        newNode->nama = nama;
+        newNode->harga = harga;
+        newNode->next = nullptr;
+        if (head == nullptr) {
+            head = tail = newNode;
+            newNode->prev = nullptr;
+        }
+        else {
+            tail->next = newNode;
+            newNode->prev = tail;
+            tail = newNode;
+        }
+    }
+
+    // Fungsi untuk menambah data di tengah / di urutan tertentu
+    void insertTengah(string nama, int harga, string namaSebelumnya) {
+        Node* newNode = new Node;
+        newNode->nama = nama;
+        newNode->harga = harga;
+        Node* temp = head;
+        while (temp != nullptr && temp->nama != namaSebelumnya) {
+            temp = temp->next;
+        }
+        if (temp == nullptr) {
+            cout << "Produk " << namaSebelumnya << " tidak ditemukan!" << endl;
+            return;
+        }
+        newNode->next = temp->next;
+        newNode->prev = temp;
+        if (temp->next != nullptr) {
+            temp->next->prev = newNode;
+        }
+        else {
+            tail = newNode;
+        }
+        temp->next = newNode;
+    }
+
+    // Fungsi untuk menghapus data berdasarkan nama produk
+    void hapusData(string nama) {
+        Node* temp = head;
+        while (temp != nullptr && temp->nama != nama) {
+            temp = temp->next;
+        }
+        if (temp == nullptr) {
+            cout << "Produk " << nama << " tidak ditemukan!" << endl;
+            return;
+        }
+        if (temp == head) {
+            head = head->next;
+            if (head != nullptr) {
+                head->prev = nullptr;
+            }
+            else {
+                tail = nullptr;
+            }
+        }
+        else if (temp == tail) {
+            tail = tail->prev;
+            tail->next = nullptr;
+        }
+        else {
+            temp->prev->next = temp->next;
+            temp->next->prev = temp->prev;
+        }
+        delete temp;
+    }
+
+    // Fungsi untuk mengubah data berdasarkan nama produk
+    void updateData(string nama, string newName, int newPrice) {
+        Node* temp = head;
+        while (temp != nullptr && temp->nama != nama) {
+            temp = temp->next;
+        }
+        if (temp == nullptr) {
+            cout << "Produk " << nama << " tidak ditemukan!" << endl;
+            return;
+        }
+        temp->nama = newName;
+        temp->harga = newPrice;
+    }
+
+    // Fungsi untuk menampilkan seluruh data dalam format tabel
+    void ShowData() {
+    Node* temp = head;
+    cout << "==============================" << endl;
+    cout << "| " << setw(14) << left << "Nama Produk" << " | " << setw(9) << left << "Harga" << " |" << endl;
+    cout << "==============================" << endl;
+    while (temp != nullptr) {
+        cout << "| " << setw(14) << left << temp->nama << " | " << setw(9) << left << temp->harga << " |" << endl;
+        temp = temp->next;
+    }
+    cout << "==============================" << endl;
+    cout << endl;
+}
+
+    // Fungsi untuk menghapus semua data
+    void hapusSemuaData() {
+        Node* current = head;
+        while (current != nullptr) {
+            Node* temp = current;
+            current = current->next;
+            delete temp;
+        }
+        head = tail = nullptr;
+    }
+};
+
+int main() {
+    // Inisialisasi DoubleLinkedList
+    DoubleLinkedList list;
+
+    // Menambahkan data awal
+    list.insertBelakang("Originote", 60000);
+    list.insertBelakang("Somethinc", 150000);
+    list.insertBelakang("Skintific", 100000);
+    list.insertBelakang("Wardah", 50000);
+    list.insertBelakang("Hanasui", 30000);
+
+    // Case:
+    // 1. Tambahkan produk Azarine dengan harga 65000 diantara Somethinc dan Skintific
+    list.insertTengah("Azarine", 65000, "Somethinc");
+
+    // 2. Hapus produk Wardah
+    list.hapusData("Wardah");
+
+    // 3. Update produk Hanasui menjadi Cleora dengan harga 55000
+    list.updateData("Hanasui", "Cleora", 55000);
+
+    // Menampilkan menu
+    while (true) {
+        cout << "Toko Skincare Purwokerto" << endl;
+        cout << "1. Tambah Data" << endl;
+        cout << "2. Hapus Data" << endl;
+        cout << "3. Update Data" << endl;
+        cout << "4. Tambah Data Urutan Tertentu" << endl;
+        cout << "5. Hapus Data Urutan Tertentu" << endl;
+        cout << "6. Hapus Seluruh Data" << endl;
+        cout << "7. Tampilkan Data" << endl;
+        cout << "8. Exit" << endl;
+
+        int pilih;
+        cout << "\nMasukkan pilihan Anda: ";
+        cin >> pilih;
+
+        switch (pilih) {
+            case 1: {
+                string namaProduk;
+                int hargaProduk;
+                cout << "Masukkan nama produk: ";
+                cin >> namaProduk;
+                cout << "Masukkan harga produk: ";
+                cin >> hargaProduk;
+                list.insertBelakang(namaProduk, hargaProduk);
+                break;
+            }
+            case 2: {
+                string namaProduk;
+                cout << "Masukkan nama produk yang ingin dihapus: ";
+                cin >> namaProduk;
+                list.hapusData(namaProduk);
+                break;
+            }
+            case 3: {
+                string namaProduk;
+                string newName;
+                int newPrice;
+                cout << "Masukkan nama produk yang ingin diupdate: ";
+                cin >> namaProduk;
+                cout << "Masukkan nama produk baru: ";
+                cin >> newName;
+                cout << "Masukkan harga produk baru: ";
+                cin >> newPrice;
+                list.updateData(namaProduk, newName, newPrice);
+                break;
+            }
+            case 4: {
+                string namaProduk;
+                string namaSebelumnya;
+                int hargaProduk;
+                cout << "Masukkan nama produk yang ingin ditambahkan: ";
+                cin >> namaProduk;
+                cout << "Masukkan nama produk yang berada sebelumnya: ";
+                cin >> namaSebelumnya;
+                cout << "Masukkan harga produk: ";
+                cin >> hargaProduk;
+                list.insertTengah(namaProduk, hargaProduk, namaSebelumnya);
+                break;
+            }
+            case 5: {
+                string namaProduk;
+                cout << "Masukkan nama produk yang ingin dihapus: ";
+                cin >> namaProduk;
+                list.hapusData(namaProduk);
+                break;
+            }
+            case 6: {
+                list.hapusSemuaData();
+                cout << "Semua data telah dihapus." << endl;
+                break;
+            }
+            case 7: {
+                list.ShowData();
+                break;
+            }
+            case 8: {
+                cout << "Anda telah keluar dari program." << endl;
+                return 0;
+            }
+            default: {
+                cout << "Pilihan tidak valid. Silakan coba lagi." << endl;
+                break;
+            }
+        }
+    }
+
+    return 0;
+}
+
+```
+#### Output:
+![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+
+Deskripsi Program: Program ini merupakan implementasi dari struktur data double linked list dalam C++, yang digunakan untuk menyimpan daftar produk skincare dan harganya. Program ini dapat digunakan pengguna untuk menambah, menghapus, mengubah, dan menampilkan data produk skincare sesuai dengan pilihan menu yang disediakan. Setiap produk memiliki nama dan harga yang disimpan dalam node linked list. Program ini juga menyediakan kemampuan untuk menambahkan data antar produk tertentu.
 
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+
 
 ## Referensi
 [1] Arraffi, Adzriel. "PENGERTIAN LINIER DALAM STRUKTUR DATA MAJEMUK." (2019).

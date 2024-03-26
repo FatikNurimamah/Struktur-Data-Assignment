@@ -760,7 +760,7 @@ public:
         temp->harga = newPrice;
     }
 
-    // Fungsi untuk menampilkan seluruh data dalam format tabel
+    // Fungsi untuk menampilkan seluruh data
     void ShowData() {
     Node* temp = head;
     cout << "==============================" << endl;
@@ -905,6 +905,14 @@ Deskripsi Program: Program ini merupakan implementasi dari struktur data double 
 
 
 ## Kesimpulan
+Linked list adalah struktur data yang fleksibel yang dapat digunakan dalam berbagai kasus.  Ada berbagai jenis linked list, seperti single linked list, single linked list circular, double linked list, dan double linked list circular, yang masing-masing memiliki karakteristik dan kegunaan  berbeda.
+
+a. Single linked list lebih sesuai untuk penelusuran data dalam satu arah, sedangkan double linked list lebih sesuai untuk penelusuran data maju dan mundur.
+
+b. Penggunaan circular linked list memungkinkan penelusuran data yang berlangsung terus-menerus tanpa perlu memeriksa kondisi NULL.
+
+Setiap jenis linked list memberikan fleksibilitas dan fungsionalitas berbeda tergantung pada kebutuhan aplikasi. Penggunaan jenis daftar tertaut yang tepat  dapat meningkatkan efisiensi dan kinerja saat mengimplementasikan struktur data dan algoritma.
+
 
 
 

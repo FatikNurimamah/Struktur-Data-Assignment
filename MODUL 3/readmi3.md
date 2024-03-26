@@ -344,6 +344,10 @@ int main()
 }
 
 ```
+
+#### Output guided 1:
+![Screenshot 2024-03-26 174305](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/875f2977-1101-4400-8598-3dbc97dfed0c)
+
 Deskripsi program: Program ini merupakan implementasi dari single linked list non-circular dalam bahasa C++. Linked list memungkinkan program untuk melakukan operasi penambahan, penghapusan, dan perubahan nilai pada node dalam Linked list. Program ini juga memiliki kemampuan untuk menampilkan isi linked list pada setiap tahap operasi yang dilakukan.
 
 ### 2. [Latihan Double Linked List]
@@ -480,6 +484,9 @@ int main() {
 }
 
 ```
+#### Output guided 2:
+![Screenshot 2024-03-26 174744](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/f998f22e-c16f-426d-966d-a140d0b97992)
+
 Deskripsi Program: Kode ini merupakan implementasi  program yang menggunakan struktur data C++ Double Linked List. Program ini memungkinkan pengguna untuk melakukan berbagai operasi pada Double Linked List, termasuk: Menambah data, menghapus data, mengubah data, menghapus semua data, dan melihat isi linked list melalui menu-menu yang disediakan dalam fungsi.
 
 

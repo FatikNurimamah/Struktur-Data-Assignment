@@ -640,7 +640,8 @@ int main() {
 
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+![Screenshot 2024-03-26 111740](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/fae05fea-0f1a-4e57-916f-c30f1733b4f7)
+
 
 Deskripsi Program: Program tersebut adalah contoh implementasi struktur data linked list dalam C++ yang digunakan untuk menyimpan informasi tentang seseorang (nama dan umur). Program ini menggunakan linked list karena pengguna akan memiliki keleluasaan untuk menambah dan menghapus data tanpa  memindahkan data lainnya, serta program ini memberikan contoh penggunaan linked list dalam menyimpan dan mengelola data secara dinamis.
 
@@ -898,12 +899,13 @@ int main() {
 
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+![Screenshot 2024-03-26 113133](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/c427543a-d108-48d1-aebb-f8e5b9905538)
 
 Deskripsi Program: Program ini merupakan implementasi dari struktur data double linked list dalam C++, yang digunakan untuk menyimpan daftar produk skincare dan harganya. Program ini dapat digunakan pengguna untuk menambah, menghapus, mengubah, dan menampilkan data produk skincare sesuai dengan pilihan menu yang disediakan. Setiap produk memiliki nama dan harga yang disimpan dalam node linked list. Program ini juga menyediakan kemampuan untuk menambahkan data antar produk tertentu.
 
 
 ## Kesimpulan
+
 
 
 ## Referensi

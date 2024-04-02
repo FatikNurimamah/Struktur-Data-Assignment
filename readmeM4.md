@@ -8,61 +8,13 @@ Circular Linked List Adalah double / single LL yang simpul terakhirnya menunjuk 
  Circular linked list dapat digambarkan sebagai berikut:
 ![Screenshot 2024-04-02 103233](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/74b68943-bfa5-4c54-8684-9960bb4e259f)
 
-OPERASI PADA CIRCULAR LINKED LIST[2]
+2. NON CIRCULAR LINKED LIST
 
-1. Deklarasi simpul (Node)
+Setiap   node   pada   linked   list mempunyai  field  yang  berisi  data  dan pointer ke  node  berikutnya  &  ke  node sebelumnya. Untuk pembentukan node baru,  mulanya  pointer  next dan  prev akan menunjuk ke nilai NULL. Selanjutnya  pointer  prev  akan menunjuk  ke  node  sebelumnya,  dan pointer  next  akan menunjuk  ke  node selanjutnya pada list, dengan kata lain pointer dari node terakhir menunjuk ke NULL[2].
+  Non circular linked list dapat digambarkan sebagai berikut:
 
-   struct simpul{
-
-   int angka;
-
-    simpul *berikut;
-
-    };
-
-2. Tambah Depan
-
-   void tambahdepan(int x){
-
-   simpul *baru, *bantu;
-
-   baru = new simpul;
-
-   baru->angka=x;
-
-   baru->berikut=baru;
-
-   if(awal==NULL){
-
-   awal=baru;
-
-   awal->berikut=awal;
-   }
-
-   else{
-
-   bantu=awal;
-
-   while(bantu->berikut!=awal){
-
-   bantu=bantu->berikut;
-
-   }
-
-   baru->berikut=awal;
-
-   awal=baru;
-
-   bantu->berikut=awal;
-
-   }
-
-   }
-
-3. Tambah Belakang
-
-   
-
+![Screenshot 2024-04-02 142045](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/701477ec-243a-417c-95cb-1f0132be0fe0)
+  
 
 ## Guided 
 
@@ -717,3 +669,5 @@ Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran
 
 ## Referensi
 [1] Arraffi, Adzriel. "PENGERTIAN LINIER DALAM STRUKTUR DATA MAJEMUK." (2019).
+
+[2] kurniman Putra, Agung. "List linier (linked list) dan variasinya_struktur data."

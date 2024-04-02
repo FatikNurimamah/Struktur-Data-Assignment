@@ -644,21 +644,416 @@ Deskripsi Program: Program ini merupakan implementasi dari Single Linked List Ci
 
 ## Unguided 
 
-### 1. []
+### 1. [Buatlah menu untuk menambahkan, mengubah, menghapus, dan melihat Nama dan NIM mahasiswa]
 
 ```C++
 #include <iostream>
+#include <string>
 using namespace std;
 
+//Fatik Nurimamah
+//2311102190
+
+
+// Node Structure
+struct Mahasiswa {
+    string nama;
+    string nim;
+    Mahasiswa* next;
+};
+
+// Linked List Class
+class CircularLinkedList {
+private:
+    Mahasiswa* head;
+
+public:
+    CircularLinkedList() : head(nullptr) {}
+    Mahasiswa* getHead() const {
+        return head;
+    }
+
+    // Fungsi untuk menambahkan data di depan linked list
+    void tambahDepan(string nama, string nim) {
+        Mahasiswa* newNode = new Mahasiswa();
+        newNode->nama = nama;
+        newNode->nim = nim;
+        newNode->next = nullptr;
+
+        if (head == nullptr) {
+            head = newNode;
+            newNode->next = head;
+        }
+        else {
+            Mahasiswa* temp = head;
+            while (temp->next != head)
+                temp = temp->next;
+            temp->next = newNode;
+            newNode->next = head;
+            head = newNode;
+        }
+        cout << "\nData telah ditambahkan" << endl;
+    }
+
+    // Fungsi untuk menambahkan data di belakang linked list
+    void tambahBelakang(string nama, string nim) {
+        Mahasiswa* newNode = new Mahasiswa();
+        newNode->nama = nama;
+        newNode->nim = nim;
+        newNode->next = nullptr;
+
+        if (head == nullptr) {
+            head = newNode;
+            newNode->next = head;
+        }
+        else {
+            Mahasiswa* temp = head;
+            while (temp->next != head)
+                temp = temp->next;
+            temp->next = newNode;
+            newNode->next = head;
+        }
+        cout << "\nData telah ditambahkan" << endl;
+    }
+
+    // Fungsi untuk menambahkan data di tengah linked list
+    void tambahTengah(string nama, string nim, int posisi) {
+        Mahasiswa* newNode = new Mahasiswa();
+        newNode->nama = nama;
+        newNode->nim = nim;
+        newNode->next = nullptr;
+
+        if (posisi == 1) {
+            tambahDepan(nama, nim);
+            return;
+        }
+        Mahasiswa* temp = head;
+        for (int i = 1; i < posisi - 1; ++i) {
+            if (temp == nullptr || temp->next == head) {
+                cout << "Posisi tidak valid" << endl;
+                return;
+            }
+            temp = temp->next;
+        }
+        newNode->next = temp->next;
+        temp->next = newNode;
+        cout << "\nData telah ditambahkan" << endl;
+    }
+
+    // Fungsi untuk menghapus data di depan linked list
+    void hapusDepan() {
+        if (head == nullptr) {
+            cout << "Linked list kosong" << endl;
+            return;
+        }
+
+        Mahasiswa* temp = head;
+        if (temp->next == head) {
+            delete temp;
+            head = nullptr;
+        }
+        else {
+            Mahasiswa* tail = head;
+            while (tail->next != head)
+                tail = tail->next;
+            head = head->next;
+            tail->next = head;
+            delete temp;
+        }
+    }
+
+    // Fungsi untuk menghapus data di belakang linked list
+    void hapusBelakang() {
+        if (head == nullptr) {
+            cout << "Linked list kosong" << endl;
+            return;
+        }
+
+        Mahasiswa* temp = head;
+        Mahasiswa* tail = nullptr;
+        while (temp->next != head) {
+            tail = temp;
+            temp = temp->next;
+        }
+        if (temp == head) {
+            delete temp;
+            head = nullptr;
+        }
+        else {
+            tail->next = head;
+            delete temp;
+        }
+    }
+
+    // Fungsi untuk menghapus data di tengah linked list
+    void hapusTengah(int posisi) {
+        if (head == nullptr) {
+            cout << "Linked list kosong" << endl;
+            return;
+        }
+        if (posisi == 1) {
+            hapusDepan();
+            return;
+        }
+        Mahasiswa* temp = head;
+        Mahasiswa* prev = nullptr;
+        for (int i = 1; i < posisi; ++i) {
+            prev = temp;
+            temp = temp->next;
+            if (temp == head) {
+                cout << "Posisi tidak valid" << endl;
+                return;
+            }
+        }
+        prev->next = temp->next;
+        delete temp;
+    }
+
+    // Fungsi untuk menghapus seluruh data pada linked list
+    void hapusList() {
+        if (head == nullptr) {
+            cout << "\nLinked list kosong" << endl;
+            return;
+        }
+        Mahasiswa* temp = head;
+        Mahasiswa* next;
+        do {
+            next = temp->next;
+            delete temp;
+            temp = next;
+        } while (temp != head);
+        head = nullptr;
+        cout << "\nLinked list berhasil dihapus" << endl;
+    }
+
+    // Fungsi untuk menampilkan semua data pada linked list
+    void tampilkanData() {
+        if (head == nullptr) {
+            cout << "Linked list kosong" << endl;
+            return;
+        }
+        Mahasiswa* temp = head;
+        cout << "DATA MAHASISWA" << endl;
+        cout << "NAMA\tNIM" << endl;
+        do {
+            cout << temp->nama << "\t" << temp->nim << endl;
+            temp = temp->next;
+        } while (temp != head);
+    }
+
+    //untuk menghapus semua node
+    ~CircularLinkedList() {
+        if (head == nullptr)
+            return;
+        Mahasiswa* curr = head;
+        Mahasiswa* next;
+        do {
+            next = curr->next;
+            delete curr;
+            curr = next;
+        } while (curr != head);
+    }
+};
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    CircularLinkedList cll;
+    int choice, posisi;
+    string nama, nim;
+    do {
+    // Tampilan Menu
+        cout << "\nPROGRAM SINGLE LINKED LIST CIRCULAR" << endl;
+        cout << "1. Tambah Depan" << endl;
+        cout << "2. Tambah Belakang" << endl;
+        cout << "3. Tambah Tengah" << endl;
+        cout << "4. Ubah Depan" << endl;
+        cout << "5. Ubah Belakang" << endl;
+        cout << "6. Ubah Tengah" << endl;
+        cout << "7. Hapus Depan" << endl;
+        cout << "8. Hapus Belakang" << endl;
+        cout << "9. Hapus Tengah" << endl;
+        cout << "10. Hapus List" << endl;
+        cout << "11. Tampilkan Data" << endl;
+        cout << "0. Keluar" << endl;
+        cout << "\nPilih Operasi : ";
+        cin >> choice;
+
+        // Melakukan operasi sesuai dengan pilihan pengguna
+        switch (choice) {
+            case 1:
+                cout << "-Tambah Depan-" << endl;
+                cout << "Masukkan Nama : ";
+                cin >> nama;
+                cout << "Masukkan NIM : ";
+                cin >> nim;
+                cll.tambahDepan(nama, nim);
+                break;
+            case 2:
+                cout << "-Tambah Belakang-" << endl;
+                cout << "Masukkan Nama : ";
+                cin >> nama;
+                cout << "Masukkan NIM : ";
+                cin >> nim;
+                cll.tambahBelakang(nama, nim);
+                break;
+            case 3:
+                cout << "-Tambah Tengah-" << endl;
+                cout << "Masukkan Nama : ";
+                cin >> nama;
+                cout << "Masukkan NIM : ";
+                cin >> nim;
+                cout << "Masukkan Posisi : ";
+                cin >> posisi;
+                cll.tambahTengah(nama, nim, posisi);
+                break;
+           case 4:
+                cout << "-Ubah Depan-" << endl;
+                    if (cll.getHead() == nullptr) {
+                        cout << "Linked list kosong" << endl;
+                    break;
+                    }
+                {
+                    string namaLama = cll.getHead()->nama;
+                    string nimLama = cll.getHead()->nim;
+                    cout << "Masukkan Nama Baru : ";
+                    cin >> nama;
+                    cout << "Masukkan NIM Baru : ";
+                    cin >> nim;
+                    cll.getHead()->nama = nama;
+                    cll.getHead()->nim = nim;
+                    cout << "Data (" << namaLama << ") telah diganti dengan data (" << nama << ")" << endl;
+                }
+                break;
+            case 5:
+                cout << "-Ubah Belakang-" << endl;
+                    if (cll.getHead() == nullptr) {
+                        cout << "Linked list kosong" << endl;
+                    break;
+                    }
+                {
+                    Mahasiswa* temp = cll.getHead();
+                        while (temp->next != cll.getHead())
+                            temp = temp->next;
+                        string namaLama = temp->nama;
+                        string nimLama = temp->nim;
+                        cout << "Masukkan Nama Baru : ";
+                        cin >> nama;
+                        cout << "Masukkan NIM Baru : ";
+                        cin >> nim;
+                        temp->nama = nama;
+                        temp->nim = nim;
+                        cout << "Data (" << namaLama << ") telah diganti dengan data (" << nama << ")" << endl;
+                }
+                break;
+
+            case 6:
+                cout << "-Ubah Tengah-" << endl;
+                    if (cll.getHead() == nullptr) {
+                        cout << "Linked list kosong" << endl;
+                    break;
+                }
+                    cout << "Masukkan Posisi : ";
+                    cin >> posisi;
+                {
+                    Mahasiswa* temp = cll.getHead();
+                    for (int i = 1; i < posisi; ++i) {
+                        temp = temp->next;
+                    if (temp == cll.getHead()) {
+                        cout << "Posisi tidak valid" << endl;
+                    }
+                }
+                    string namaLama = temp->nama;
+                    string nimLama = temp->nim;
+                    cout << "Masukkan Nama Baru : ";
+                    cin >> nama;
+                    cout << "Masukkan NIM Baru : ";
+                    cin >> nim;
+                    temp->nama = nama;
+                    temp->nim = nim;
+                        cout << "Data (" << namaLama << ") telah diganti dengan data (" << nama << ")" << endl;
+                }
+                break;
+            case 7:
+                cout << "\n-Hapus Depan-" << endl;
+                    if (cll.getHead() == nullptr) {
+                        cout << "Linked list kosong" << endl;
+                    break;
+                }
+            {
+                string namaHapus = cll.getHead()->nama;
+                cout << "Data (" << namaHapus << ") berhasil dihapus" << endl;
+            }
+                cll.hapusDepan();
+                break;
+
+          case 8:
+              cout << "-Hapus Belakang-" << endl;
+                    if (cll.getHead() == nullptr) {
+                        cout << "Linked list kosong" << endl;
+                    break;
+                }
+            {
+            Mahasiswa* temp = cll.getHead();
+                while (temp->next != cll.getHead())
+                    temp = temp->next;
+                string namaHapus = temp->nama;
+                cout << "Data (" << namaHapus << ") berhasil dihapus" << endl;
+            }
+                cll.hapusBelakang();
+                break;
+
+         case 9:
+             cout << "-Hapus Tengah-" << endl;
+             cout << "Masukkan Posisi : ";
+             cin >> posisi;
+                if (posisi < 1) {
+                    cout << "Posisi tidak valid" << endl;
+                break;
+            }
+                if (posisi == 1 && cll.getHead() != nullptr) {
+                    string namaHapus = cll.getHead()->nama;
+                    cout << "Data (" << namaHapus << ") berhasil dihapus" << endl;
+                    cll.hapusDepan();
+                    break;
+                }
+            {
+                Mahasiswa* temp = cll.getHead();
+                Mahasiswa* prev = nullptr;
+                for (int i = 1; i < posisi; ++i) {
+                prev = temp;
+                temp = temp->next;
+                if (temp == cll.getHead()) {
+                cout << "Posisi tidak valid" << endl;
+                }
+            }
+                string namaHapus = temp->nama;
+                cout << "Data (" << namaHapus << ") berhasil dihapus" << endl;
+                cll.hapusTengah(posisi);
+           }
+            break;
+            case 10:
+                cout << "-Hapus List-" << endl;
+                cll.hapusList();
+                break;
+            case 11:
+                cout << "-Tampilkan Data-" << endl;
+                cll.tampilkanData();
+                break;
+            case 0:
+                cout << "Terima kasih!" << endl;
+                break;
+            default:
+                cout << "Pilihan tidak valid!" << endl;
+        }
+    } while (choice != 0);
+
     return 0;
 }
+
 ```
 #### Output:
 ![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Deskripsi Program: 
 
 #### Full code Screenshot:
 ![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)

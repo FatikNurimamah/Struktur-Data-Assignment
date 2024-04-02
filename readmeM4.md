@@ -10,10 +10,10 @@ Circular Linked List Adalah double / single LL yang simpul terakhirnya menunjuk 
 
 2. NON CIRCULAR LINKED LIST
 
-Setiap   node   pada   linked   list mempunyai  field  yang  berisi  data  dan pointer ke  node  berikutnya  &  ke  node sebelumnya. Untuk pembentukan node baru,  mulanya  pointer  next dan  prev akan menunjuk ke nilai NULL. Selanjutnya  pointer  prev  akan menunjuk  ke  node  sebelumnya,  dan pointer  next  akan menunjuk  ke  node selanjutnya pada list, dengan kata lain pointer dari node terakhir menunjuk ke NULL[2].
-  Non circular linked list dapat digambarkan sebagai berikut:
+Setiap   node   pada   linked   list mempunyai  field  yang  berisi  data  dan pointer ke  node  berikutnya  &  ke  node sebelumnya. Untuk pembentukan node baru,  mulanya  pointer  next dan  prev akan menunjuk ke nilai NULL. Selanjutnya  pointer  prev  akan menunjuk  ke  node  sebelumnya,  dan pointer  next  akan menunjuk  ke  node selanjutnya pada list, dengan kata lain pointer dari node terakhir menunjuk ke NULL[2]. Non circular linked list dapat digambarkan sebagai berikut:
 
-![Screenshot 2024-04-02 142045](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/701477ec-243a-417c-95cb-1f0132be0fe0)
+![Screenshot 2024-04-02 205133](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/cd1bdee2-0635-4d14-95f1-2835091f577f)
+
   
 
 ## Guided 
@@ -644,7 +644,7 @@ Deskripsi Program: Program ini merupakan implementasi dari Single Linked List Ci
 
 ## Unguided 
 
-### 1. [Soal]
+### 1. []
 
 ```C++
 #include <iostream>

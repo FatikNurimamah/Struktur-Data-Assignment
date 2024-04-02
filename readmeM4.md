@@ -8,6 +8,60 @@ Circular Linked List Adalah double / single LL yang simpul terakhirnya menunjuk 
  Circular linked list dapat digambarkan sebagai berikut:
 ![Screenshot 2024-04-02 103233](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/74b68943-bfa5-4c54-8684-9960bb4e259f)
 
+OPERASI PADA CIRCULAR LINKED LIST[2]
+
+1. Deklarasi simpul (Node)
+
+   struct simpul{
+
+   int angka;
+
+    simpul *berikut;
+
+    };
+
+2. Tambah Depan
+
+   void tambahdepan(int x){
+
+   simpul *baru, *bantu;
+
+   baru = new simpul;
+
+   baru->angka=x;
+
+   baru->berikut=baru;
+
+   if(awal==NULL){
+
+   awal=baru;
+
+   awal->berikut=awal;
+   }
+
+   else{
+
+   bantu=awal;
+
+   while(bantu->berikut!=awal){
+
+   bantu=bantu->berikut;
+
+   }
+
+   baru->berikut=awal;
+
+   awal=baru;
+
+   bantu->berikut=awal;
+
+   }
+
+   }
+
+3. Tambah Belakang
+
+   
 
 
 ## Guided 

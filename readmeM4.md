@@ -1058,7 +1058,8 @@ Deskripsi Program: Program di atas merupakan implementasi struktur data linked l
 
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+Kesimpulannya adalah:
+Circular Linked List dan Non-Circular Linked List adalah dua jenis struktur data linked list yang berbeda dalam cara mereka mengatur pointer antara simpul-simpulnya. Circular Linked List memiliki siklus tertutup di mana simpul terakhir menunjuk kembali ke simpul pertama, sedangkan Non-Circular Linked List tidak memiliki siklus tertutup dan setiap simpul memiliki pointer ke simpul sebelumnya dan berikutnya. Dalam Non-Circular Linked List, pointer dari node terakhir menunjuk ke NULL, menandakan akhir dari list.
 
 ## Referensi
 [1] Arraffi, Adzriel. "PENGERTIAN LINIER DALAM STRUKTUR DATA MAJEMUK." (2019).

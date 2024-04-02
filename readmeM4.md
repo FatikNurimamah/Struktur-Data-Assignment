@@ -6,7 +6,7 @@
    
 Circular Linked List Adalah double / single LL yang simpul terakhirnya menunjuk ke simpul awal, dan simpul awalnya menunjuk ke simpul akhir, atau dapat disebut LL yang dibuat seakan-akan merupakan sebuah lingkaran dengan titik awal dantitik akhir saling bersebelahan jika LL tersebut masih kosong[1].
  Circular linked list dapat digambarkan sebagai berikut:
-![Screenshot 2024-04-02 103233](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/74b68943-bfa5-4c54-8684-9960bb4e259f)
+![Screenshot 2024-04-02 204733](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/e7d845a8-6ef7-4ffc-9641-262c3e548a18)
 
 2. NON CIRCULAR LINKED LIST
 

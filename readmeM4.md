@@ -692,7 +692,7 @@ public:
             newNode->next = head;
             head = newNode;
         }
-        cout << "\nData telah ditambahkan" << endl;
+        cout << "Data telah ditambahkan\n" << endl;
     }
 
     // Fungsi untuk menambahkan data di belakang linked list
@@ -713,7 +713,7 @@ public:
             temp->next = newNode;
             newNode->next = head;
         }
-        cout << "\nData telah ditambahkan" << endl;
+        cout << "Data telah ditambahkan\n" << endl;
     }
 
     // Fungsi untuk menambahkan data di tengah linked list
@@ -737,7 +737,7 @@ public:
         }
         newNode->next = temp->next;
         temp->next = newNode;
-        cout << "\nData telah ditambahkan" << endl;
+        cout << "Data telah ditambahkan\n" << endl;
     }
 
     // Fungsi untuk menghapus data di depan linked list
@@ -823,7 +823,7 @@ public:
             temp = next;
         } while (temp != head);
         head = nullptr;
-        cout << "\nLinked list berhasil dihapus" << endl;
+        cout << "Linked list berhasil dihapus\n" << endl;
     }
 
     // Fungsi untuk menampilkan semua data pada linked list
@@ -861,7 +861,7 @@ int main() {
     string nama, nim;
     do {
     // Tampilan Menu
-        cout << "\nPROGRAM SINGLE LINKED LIST CIRCULAR" << endl;
+        cout << "PROGRAM SINGLE LINKED LIST CIRCULAR" << endl;
         cout << "1. Tambah Depan" << endl;
         cout << "2. Tambah Belakang" << endl;
         cout << "3. Tambah Tengah" << endl;
@@ -874,13 +874,13 @@ int main() {
         cout << "10. Hapus List" << endl;
         cout << "11. Tampilkan Data" << endl;
         cout << "0. Keluar" << endl;
-        cout << "\nPilih Operasi : ";
+        cout << "Pilih Operasi : ";
         cin >> choice;
 
         // Melakukan operasi sesuai dengan pilihan pengguna
         switch (choice) {
             case 1:
-                cout << "-Tambah Depan-" << endl;
+                cout << "\n-Tambah Depan-" << endl;
                 cout << "Masukkan Nama : ";
                 cin >> nama;
                 cout << "Masukkan NIM : ";
@@ -888,7 +888,7 @@ int main() {
                 cll.tambahDepan(nama, nim);
                 break;
             case 2:
-                cout << "-Tambah Belakang-" << endl;
+                cout << "\n-Tambah Belakang-" << endl;
                 cout << "Masukkan Nama : ";
                 cin >> nama;
                 cout << "Masukkan NIM : ";
@@ -896,7 +896,7 @@ int main() {
                 cll.tambahBelakang(nama, nim);
                 break;
             case 3:
-                cout << "-Tambah Tengah-" << endl;
+                cout << "\n-Tambah Tengah-" << endl;
                 cout << "Masukkan Nama : ";
                 cin >> nama;
                 cout << "Masukkan NIM : ";
@@ -906,7 +906,7 @@ int main() {
                 cll.tambahTengah(nama, nim, posisi);
                 break;
            case 4:
-                cout << "-Ubah Depan-" << endl;
+                cout << "\n-Ubah Depan-" << endl;
                     if (cll.getHead() == nullptr) {
                         cout << "Linked list kosong" << endl;
                     break;
@@ -924,7 +924,7 @@ int main() {
                 }
                 break;
             case 5:
-                cout << "-Ubah Belakang-" << endl;
+                cout << "\n-Ubah Belakang-" << endl;
                     if (cll.getHead() == nullptr) {
                         cout << "Linked list kosong" << endl;
                     break;
@@ -946,7 +946,7 @@ int main() {
                 break;
 
             case 6:
-                cout << "-Ubah Tengah-" << endl;
+                cout << "\n-Ubah Tengah-" << endl;
                     if (cll.getHead() == nullptr) {
                         cout << "Linked list kosong" << endl;
                     break;
@@ -969,7 +969,7 @@ int main() {
                     cin >> nim;
                     temp->nama = nama;
                     temp->nim = nim;
-                        cout << "Data (" << namaLama << ") telah diganti dengan data (" << nama << ")" << endl;
+                        cout << "Data (" << namaLama << ") telah diganti dengan data (" << nama << ")\n" << endl;
                 }
                 break;
             case 7:
@@ -980,7 +980,7 @@ int main() {
                 }
             {
                 string namaHapus = cll.getHead()->nama;
-                cout << "Data (" << namaHapus << ") berhasil dihapus" << endl;
+                cout << "Data (" << namaHapus << ") berhasil dihapus\n" << endl;
             }
                 cll.hapusDepan();
                 break;
@@ -996,7 +996,7 @@ int main() {
                 while (temp->next != cll.getHead())
                     temp = temp->next;
                 string namaHapus = temp->nama;
-                cout << "Data (" << namaHapus << ") berhasil dihapus" << endl;
+                cout << "Data (" << namaHapus << ") berhasil dihapus\n" << endl;
             }
                 cll.hapusBelakang();
                 break;
@@ -1011,7 +1011,7 @@ int main() {
             }
                 if (posisi == 1 && cll.getHead() != nullptr) {
                     string namaHapus = cll.getHead()->nama;
-                    cout << "Data (" << namaHapus << ") berhasil dihapus" << endl;
+                    cout << "Data (" << namaHapus << ") berhasil dihapus\n" << endl;
                     cll.hapusDepan();
                     break;
                 }
@@ -1026,16 +1026,16 @@ int main() {
                 }
             }
                 string namaHapus = temp->nama;
-                cout << "Data (" << namaHapus << ") berhasil dihapus" << endl;
+                cout << "Data (" << namaHapus << ") berhasil dihapus\n" << endl;
                 cll.hapusTengah(posisi);
            }
             break;
             case 10:
-                cout << "-Hapus List-" << endl;
+                cout << "\n-Hapus List-" << endl;
                 cll.hapusList();
                 break;
             case 11:
-                cout << "-Tampilkan Data-" << endl;
+                cout << "\n-Tampilkan Data-" << endl;
                 cll.tampilkanData();
                 break;
             case 0:
@@ -1051,11 +1051,31 @@ int main() {
 
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+![Screenshot 2024-04-02 233047](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/dd25bdc4-9557-49a8-8b69-73384c531938)
+
+![Screenshot 2024-04-02 233234](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/9f112534-08b1-41f1-9449-ea40b03531f4)
+
+![Screenshot 2024-04-02 233340](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/c100999c-df31-4043-a217-475b9c185c2c)
+
+![Screenshot 2024-04-02 233449](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/467e13d0-15b7-43d1-b344-73672bfc0ab6)
+
+![Screenshot 2024-04-02 233616](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/2405f4c6-4337-4769-9d7d-fe96cb795ce4)
+
+![Screenshot 2024-04-02 233903](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/ffd5d2d1-bd24-457a-9b5b-ba0bb6e2f68a)
+
+![Screenshot 2024-04-02 234037](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/96a6cdb7-0393-4b04-995a-9394059cefff)
+
+![Screenshot 2024-04-02 234228](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/8a9cfb1d-27b2-42d0-98a3-a695f5ec35cb)
+
+![Screenshot 2024-04-02 234259](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/b98f7424-db4c-4c84-8dfb-5f66e32b81d7)
+
+![Screenshot 2024-04-02 234357](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/06d5940c-65a5-4909-a966-a1a1d50c01a4)
+
+![Screenshot 2024-04-02 234516](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/0c996ef2-c62a-4c08-9973-5daf087010d7)
+
+![Screenshot 2024-04-02 234556](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/7d548298-0b98-4556-a1e1-2e1db31329a6)
 
 Deskripsi Program: Program di atas merupakan implementasi struktur data linked list circular dalam bahasa C++. Program ini dapat digunakan oleh pengguna untuk menambah, menghapus, dan mengubah data dalam linked list. Melalui menu interaktif, pengguna dapat memilih operasi sesuai keinginan sendiri untuk dilakukan pada linked list tersebut.
-
-
 
 ## Kesimpulan
 Kesimpulannya adalah:

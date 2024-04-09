@@ -164,7 +164,8 @@ int main() {
 #### Output:
 
 
-Deskripsi Program: 
+Deskripsi Program:  Program tersebut terdiri dari dua kelas utama, yaitu: HashNode yang merepresentasikan node dalam hash table dengan informasi nama dan nomor telepon karyawan, serta HashMap yang mengimplementasikan struktur hash table menggunakan vektor pointer ke HashNode. Fungsi hashFunc digunakan untyk menghitung nilai hash dari nama karyawan, fumgsi insert untuk menambahkan data baru, fungsi remove untuk menghapus data, dan fungsi searchByName untuk mencari nomor telepon karyawan berdasarkan nama.
+
 
 ## Unguided 
 
@@ -181,8 +182,8 @@ int main() {
 ```
 #### Output:
 
-Deskripsi Program: 
 
+Deskripsi Program:
 
 ## Kesimpulan
 1. Hash Table merupakan struktur data yang efisien dalam pencarian data karena mengimplementasikan waktu pencarian yang konsisten (O(1)) bahkan untuk jumlah data yang besar, berkat fungsi hash yang langsung menentukan lokasi penyimpanan.

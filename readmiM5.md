@@ -153,7 +153,18 @@ Deskripsi Program: Program tersebut menggunakan array dinamis "table" untuk meny
 ### 2. 
 
 ```C++
+#include <iostream>
+using namespace std;
 
+int main() {
+    cout << "ini adalah file code unguided praktikan" << endl;
+    return 0;
+}
+```
+#### Output:
+
+
+Deskripsi Program: 
 
 ## Unguided 
 
@@ -169,16 +180,14 @@ int main() {
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
-
-#### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
+Deskripsi Program: 
 
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+1. Hash Table merupakan struktur data yang efisien dalam pencarian data karena mengimplementasikan waktu pencarian yang konsisten (O(1)) bahkan untuk jumlah data yang besar, berkat fungsi hash yang langsung menentukan lokasi penyimpanan.
+
+2. Fungsi hash adalah elemen kunci dari hash table yang mengubah data berbagai ukuran menjadi nilai dengan ukuran tertentu dan memungkinkan pengindeksan yang cepat dan efisien.
 
 ## Referensi
 [1] Syahrir, Moch, and Fatimatuzzahra Fatimatuzzahra. "Association Rule Integrasi Pendekatan Metode Custom Hashing dan Data Partitioning untuk Mempercepat Proses Pencarian Frekuensi Item-set pada Algoritma Apriori." Matrik: Jurnal Manajemen, Teknik Informatika Dan Rekayasa Komputer 20.1 (2020): 149-158.

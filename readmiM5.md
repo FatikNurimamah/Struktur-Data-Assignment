@@ -258,21 +258,121 @@ Deskripsi Program:  Program tersebut terdiri dari dua kelas utama, yaitu: HashNo
 
 ## Unguided 
 
-### 1. [Soal]
+### 1. [Implementasikan hash table untuk menyimpan data mahasiswa. Setiap mahasiswa memiliki NIM dan nilai. Implementasikan fungsi untuk menambahkan data baru, menghapus data, mencari data berdasarkan NIM, dan mencari data berdasarkan nilai. Dengan ketentuan : a. Setiap mahasiswa memiliki NIM dan nilai. b. Program memiliki tampilan pilihan menu berisi poin C. c. Implementasikan fungsi untuk menambahkan data baru, menghapus data, mencari data berdasarkan NIM, dan mencari data berdasarkan rentang nilai (80 – 90).]
 
 ```C++
 #include <iostream>
+#include <unordered_map>
+#include <vector>
+
+// Fatik Nurimamah
+// 2311102190
+
 using namespace std;
 
+// Struktur data untuk menyimpan data Mahasiswa
+struct Mahasiswa {
+    int NIM;
+    int nilai;
+};
+
+class HashTable {
+private:
+    unordered_map<int, Mahasiswa> data;
+
+public:
+    // Fungsi untuk menambahkan data mahasiswa
+    void tambahData(int NIM, int nilai) {
+        Mahasiswa mhs;
+        mhs.NIM = NIM;
+        mhs.nilai = nilai;
+        data[NIM] = mhs;
+    }
+
+    // Fungsi untuk menghapus data mahasiswa
+    void hapusData(int NIM) {
+        if (data.find(NIM) != data.end()) {
+            data.erase(NIM);
+            cout << "Data Mahasiswa dengan NIM " << NIM << " berhasil dihapus." << endl;
+        } else {
+            cout << "Data Mahasiswa dengan NIM " << NIM << " tidak ditemukan." << endl;
+        }
+    }
+
+    // Fungsi untuk mencari data berdasarkan NIM
+    void cariMhsBerdasarkanNIM(int NIM) {
+        if (data.find(NIM) != data.end()) {
+            cout << "Data Mahasiswa dengan NIM " << NIM << " ditemukan. Dengan nilai yang telah diperoleh: " << data[NIM].nilai << endl;
+        } else {
+            cout << "Data Mahasiswa dengan NIM " << NIM << " tidak ditemukan." << endl;
+        }
+    }
+
+    // Fungsi untuk mencari data berdasarkan rentang nilai (80 - 90)
+    void cariMhsBerdasarkanNilai() {
+        cout << "\nMahasiswa dengan nilai antara 80 - 90: " << endl;
+        for (auto& pair : data) {
+            if (pair.second.nilai >= 80 && pair.second.nilai <= 90) {
+                cout << "NIM: " << pair.second.NIM << "\nNilai: " << pair.second.nilai << endl;
+            }
+        }
+    }
+};
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    HashTable hashTable;
+    int pilih, NIM, nilai;
+
+    do {
+        cout << "\nMenu:" << endl;
+        cout << "1. Tambah Data Mahasiswa" << endl;
+        cout << "2. Hapus Data Mahasiswa" << endl;
+        cout << "3. Cari Data Mahasiswa berdasarkan NIM" << endl;
+        cout << "4. Cari Data Mahasiswa berdasarkan Rentang Nilai (80 - 90)" << endl;
+        cout << "0. Keluar" << endl;
+        cout << "Pilih Operasi: ";
+        cin >> pilih;
+
+        switch (pilih) {
+            case 1:
+                cout << "\nMasukkan NIM Mahasiswa: ";
+                cin >> NIM;
+                cout << "Masukkan Nilai Mahasiswa: ";
+                cin >> nilai;
+                hashTable.tambahData(NIM, nilai);
+                break;
+            case 2:
+                cout << "\nMasukkan NIM Mahasiswa yang akan dihapus: ";
+                cin >> NIM;
+                hashTable.hapusData(NIM);
+                break;
+            case 3:
+                cout << "\nMasukkan NIM Mahasiswa yang ingin dicari: ";
+                cin >> NIM;
+                hashTable.cariMhsBerdasarkanNIM(NIM);
+                break;
+            case 4:
+                hashTable.cariMhsBerdasarkanNilai();
+                break;
+            case 0:
+                cout << "Program selesai." << endl;
+                break;
+            default:
+                cout << "Pilihan tidak valid. Silakan pilih lagi." << endl;
+                break;
+        }
+    } while (pilih != 0);
+
     return 0;
 }
+
 ```
 #### Output:
+![Screenshot 2024-04-11 211219](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/d336d280-3231-4e23-a5b6-edacb38406a3)
 
+![Screenshot 2024-04-11 211351](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/deee49e0-653c-41bb-9b52-4abeb0e53486)
 
-Deskripsi Program:
+Deskripsi Program: 
 
 ## Kesimpulan
 1. Hash Table merupakan struktur data yang efisien dalam pencarian data karena mengimplementasikan waktu pencarian yang konsisten (O(1)) bahkan untuk jumlah data yang besar, berkat fungsi hash yang langsung menentukan lokasi penyimpanan.

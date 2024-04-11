@@ -372,7 +372,7 @@ int main() {
 
 ![Screenshot 2024-04-11 211351](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/deee49e0-653c-41bb-9b52-4abeb0e53486)
 
-Deskripsi Program: 
+Deskripsi Program: Program tersebut adalah program sederhana yang berguna untuk mengelola data mahasiswa dengan menggunakan struktur data Hash Table. Pada program ini, pengguna dapat menambahkan, menghapus, dan mencari data mahasiswa berdasarkan NIM atau rentang nilai. Setelah memilih operasi yang tersedia pada menu, pengguna diminta untuk memasukkan data yang diperlukan, seperti NIM dan nilai, dan program akan memberikan respons yang sesuai dengan operasi pada menu yang telah dipilih. Program akan berjalan hingga pengguna memilih untuk keluar.
 
 ## Kesimpulan
 1. Hash Table merupakan struktur data yang efisien dalam pencarian data karena mengimplementasikan waktu pencarian yang konsisten (O(1)) bahkan untuk jumlah data yang besar, berkat fungsi hash yang langsung menentukan lokasi penyimpanan.

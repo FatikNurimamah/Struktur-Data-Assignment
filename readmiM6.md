@@ -197,7 +197,7 @@ int main() {
 
 ```
 #### Output:
-
+![Screenshot 2024-05-04 230526](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/e477c5a5-2ec3-4864-b5f1-a005cab5d5ca)
 
 
 Cara kerja program: 

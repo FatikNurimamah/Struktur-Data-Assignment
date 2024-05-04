@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul STACK</h1>
+# <h1 align="center">Laporan Praktikum MODUL STACK</h1>
 <p align="center">Fatik Nurimamah (2311102190)</p>
 
 ## Dasar Teori
@@ -199,6 +199,7 @@ int main() {
 #### Output:
 
 
+
 Cara kerja program: 
 
 #### Full code Screenshot:
@@ -283,6 +284,8 @@ int main() {
 }
 ```
 #### Output:
+![Screenshot 2024-05-04 224932](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/3dc182e5-8ace-4840-b0ad-f6695c73e2f5)
+
 
 
 Penjelasan program:

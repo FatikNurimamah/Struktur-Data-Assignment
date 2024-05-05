@@ -294,7 +294,11 @@ int main() {
 Penjelasan program: Program ini bertujuan untuk mengolah tiga kata yang dimasukkan pengguna dengan membalikkan urutan kata dan huruf dalam kalimat, lalu mencetak hasilnya. Setelah meminta input dari pengguna, program memeriksa apakah kalimat tersebut mengandung minimal tiga kata. Jika ya, program menggunakan fungsi `BalikKalimat` untuk melakukan proses pembalikan urutan kata dan huruf. Fungsi ini bekerja dengan cara memisahkan kalimat menjadi kata-kata, mengubah setiap kata menjadi huruf kecil, menambahkannya ke dalam tumpukan, dan kemudian membangun kembali kalimat terbalik dengan mengambil kata-kata dari tumpukan. Hasil akhirnya, berupa kalimat yang telah dibalik, dicetak oleh program. Namun, jika kalimat yang dimasukkan tidak mengandung minimal tiga kata, program akan memberikan pesan kesalahan. Dengan demikian, output dari program ini adalah kalimat yang telah diolah dengan urutan kata dan huruf yang dibalik.
 
 #### Full code Screenshot:
+![Screenshot 2024-05-05 171946](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/b4c6ff62-63bd-4db3-bf44-778977f098ca)
 
+![Screenshot 2024-05-05 172116](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/0510878c-a0f7-4ff8-b453-f9d31eb3bc66)
+
+![Screenshot 2024-05-05 172156](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/6cb4ca0b-312a-435a-93d1-cb3a255e3f7b)
 
 ## Kesimpulan
 1. Stack adalah struktur data yang mengikuti prinsip LIFO (Last In First Out), di mana objek terakhir yang dimasukkan akan menjadi yang pertama dikeluarkan. Hanya elemen paling atas dari stack yang dapat diakses, memberikan fleksibilitas dalam pengelolaan urutan data.

@@ -295,6 +295,9 @@ Penjelasan program: Program ini bertujuan untuk mengolah tiga kata yang dimasukk
 
 
 ## Kesimpulan
+1. Stack adalah struktur data yang mengikuti prinsip LIFO (Last In First Out), di mana objek terakhir yang dimasukkan akan menjadi yang pertama dikeluarkan. Hanya elemen paling atas dari stack yang dapat diakses, memberikan fleksibilitas dalam pengelolaan urutan data.
+
+2. Implementasi stack dapat dilakukan menggunakan array atau linked list, sesuai dengan kebutuhan aplikasi. Operasi dasar seperti Push (penambahan item), Pop (penghapusan item), Clear (pengosongan stack), IsEmpty (pengecekan apakah stack kosong), dan IsFull (pengecekan apakah stack penuh) merupakan fungsi utama yang mendukung penggunaan stack dalam pemrograman. Dengan memahami konsep dan operasi-operasi ini, pengguna dapat memanfaatkan stack secara efisien dalam berbagai aplikasi pemrograman.
 
 
 ## Referensi

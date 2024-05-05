@@ -289,9 +289,7 @@ int main() {
 #### Output:
 ![Screenshot 2024-05-04 224932](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/3dc182e5-8ace-4840-b0ad-f6695c73e2f5)
 
-
-
-Penjelasan program:
+Penjelasan program: Program ini bertujuan untuk mengolah tiga kata yang dimasukkan pengguna dengan membalikkan urutan kata dan huruf dalam kalimat, lalu mencetak hasilnya. Setelah meminta input dari pengguna, program memeriksa apakah kalimat tersebut mengandung minimal tiga kata. Jika ya, program menggunakan fungsi `BalikKalimat` untuk melakukan proses pembalikan urutan kata dan huruf. Fungsi ini bekerja dengan cara memisahkan kalimat menjadi kata-kata, mengubah setiap kata menjadi huruf kecil, menambahkannya ke dalam tumpukan, dan kemudian membangun kembali kalimat terbalik dengan mengambil kata-kata dari tumpukan. Hasil akhirnya, berupa kalimat yang telah dibalik, dicetak oleh program. Namun, jika kalimat yang dimasukkan tidak mengandung minimal tiga kata, program akan memberikan pesan kesalahan. Dengan demikian, output dari program ini adalah kalimat yang telah diolah dengan urutan kata dan huruf yang dibalik.
 
 #### Full code Screenshot:
 

@@ -136,7 +136,10 @@ int main() {
 #### Output:
 ![Screenshot 2024-05-02 090820](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/053d5952-7c3b-4219-920d-5fe589985216)
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Deskripsi Program: 
+
+
+
 
 ## Unguided 
 

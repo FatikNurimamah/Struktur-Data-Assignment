@@ -205,7 +205,9 @@ int main() {
 Cara kerja program: Program tersebut merupakan sebuah program C++ yang bertujuan untuk menentukan apakah sebuah kalimat yang dimasukkan oleh pengguna merupakan palindrom atau tidak. Pertama-tama, program melakukan proses pembersihan terhadap kalimat tersebut dari karakter-karakter yang bukan huruf atau angka, dan mengubah semua huruf menjadi huruf kecil. Selanjutnya, program mengambil setengah karakter pertama dari kalimat yang telah dibersihkan dan menyimpannya ke dalam tumpukan. Kemudian, program membandingkan setengah karakter kedua dari kalimat dengan setengah karakter pertama yang telah diambil dari tumpukan secara berurutan. Apabila semua karakter yang dibandingkan sama, program akan menghasilkan output bahwa kalimat tersebut merupakan palindrom. Namun, jika terdapat perbedaan antara karakter yang dibandingkan, program akan menyatakan bahwa kalimat tersebut bukan palindrom. Dengan menggunakan struktur data tumpukan, program ini efektif dalam menentukan palindromitas suatu kalimat.
 
 #### Full code Screenshot:
+![Screenshot 2024-05-05 171213](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/fe20a22e-bd49-4b79-8bdc-14da9c5d8298)
 
+![Screenshot 2024-05-05 171511](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/aee29d8f-8e0b-4f5a-a812-fc5439f18c91)
 
 
 ### 2. [Buatlah program untuk melakukan pembalikan terhadap kalimat menggunakan stack dengan minimal 3 kata. Jelaskan output program dan source codenya beserta operasi/fungsi yang dibuat?]

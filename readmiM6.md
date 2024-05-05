@@ -136,10 +136,7 @@ int main() {
 #### Output:
 ![Screenshot 2024-05-02 090820](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/053d5952-7c3b-4219-920d-5fe589985216)
 
-Deskripsi Program: 
-
-
-
+Deskripsi Program: Program di atas merupakan contoh implementasi sederhana dari struktur data tumpukan menggunakan array dalam bahasa C++. Program tersebut memungkinkan pengguna untuk menambah, menghapus, dan mengelola daftar buku yang tersimpan dalam tumpukan. Fungsi-fungsi utama dalam program, seperti menambah (`push`), menghapus (`pop`), melihat nilai pada posisi tertentu (`peek`), menghitung jumlah elemen, dan mengosongkan tumpukan, memberikan kemampuan dasar untuk mengatur data dalam tumpukan buku. Program ini menggunakan variabel `top` untuk mengindikasikan elemen teratas dalam tumpukan, serta fungsi-fungsi bantuan seperti `isFull` dan `isEmpty` untuk memeriksa status tumpukan. Selain itu, program mencetak status tumpukan dan isi tumpukan pada titik-titik tertentu untuk memberikan informasi tentang operasi yang sedang dilakukan kepada pengguna. 
 
 ## Unguided 
 

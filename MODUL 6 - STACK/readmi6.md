@@ -4,12 +4,12 @@
 ## Dasar Teori
 PENGERTIAN STACK
 
-Stack atau tumpukan, merupakan struktur data yang memiliki peran penting dalam pemrograman dengan metode pemrosesan LIFO (Last In First Out). Artinya, objek yang terakhir dimasukkan ke dalam tumpukan akan menjadi yang pertama dikeluarkan. Dengan model ini, hanya elemen teratas dari stack (TOP) yang dapat diakses atau dikeluarkan. Salah satu keunggulan dari stack adalah kemampuannya untuk diimplementasikan baik menggunakan array maupun linked list.
+Stack atau tumpukan, merupakan struktur data yang memiliki peran penting dalam pemrograman dengan metode pemrosesan LIFO (Last In First Out)[1]. Artinya, objek yang terakhir dimasukkan ke dalam tumpukan akan menjadi yang pertama dikeluarkan[1]. Dengan model ini, hanya elemen teratas dari stack (TOP) yang dapat diakses atau dikeluarkan[1]. Salah satu keunggulan dari stack adalah kemampuannya untuk diimplementasikan baik menggunakan array maupun linked list[1].
 Berikut merupakan visualisasi dari stack: 
 
 ![Screenshot 2024-05-04 220121](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/6faa1469-b064-400a-92cd-bd146f67f19a)
 
-Adapun operasi-operasi/fungsi yang dapat dilakukan pada stack adalah sebagai berikut : 
+Adapun operasi-operasi/fungsi yang dapat dilakukan pada stack adalah sebagai berikut[1] : 
 
 1) Push  : digunakan  untuk menambah item pada stack pada tumpukan paling atas.
   

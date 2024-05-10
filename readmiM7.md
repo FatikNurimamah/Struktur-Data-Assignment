@@ -123,7 +123,9 @@ int main() {
 #### Output:
 ![Screenshot 2024-05-10 201648](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/761ade09-3aa8-4a4f-8b57-7ce2d2569fa1)
 
-Deskripsi program: 
+Deskripsi program: Program tersebut merupakan contoh sederhana penggunaan struktur data antrian (queue) dalam bahasa C++. Dalam program ini, sebuah array bernama `queueTeller` digunakan untuk menampung elemen-elemen antrian. Fungsi-fungsi seperti `enqueueAntrian()` digunakan untuk menambahkan elemen ke dalam antrian, `dequeueAntrian()` untuk menghapus elemen dari antrian, `countQueue()` untuk menghitung jumlah elemen dalam antrian, `clearQueue()` untuk mengosongkan antrian, dan `viewQueue()` untuk menampilkan isi antrian. Penanda `front` dan `back` digunakan untuk mengindikasikan elemen depan dan belakang antrian. Program ini memberikan contoh penggunaan dengan data "Andi" dan "Maya", menggambarkan operasi dasar yang dapat dilakukan pada struktur data antrian.
+
+
 ## Unguided 
 
 ### 1. [Soal]

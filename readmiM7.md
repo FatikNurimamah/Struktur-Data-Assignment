@@ -128,7 +128,7 @@ Deskripsi program: Program tersebut merupakan contoh sederhana penggunaan strukt
 
 ## Unguided 
 
-### 1. [Soal]
+### 1. [Ubahlah penerapan konsep queue pada bagian guided dari array menjadi linked list]
 
 ```C++
 #include <iostream>
@@ -145,7 +145,7 @@ Deskripsi program:
 
 #### Full code Screenshot:
 
-### 2. [Soal]
+### 2. [Dari nomor 1 buatlah konsep antri dengan atribut Nama mahasiswa dan NIM Mahasiswa]
 
 ```C++
 #include <iostream>

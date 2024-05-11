@@ -165,7 +165,9 @@ Deskripsi program:
 
 
 ## Kesimpulan
-
+1. Queue atau antrian adalah struktur data yang mengutamakan urutan penyisipan dan penghapusan elemen, dengan memastikan urutan pertama masuk adalah yang pertama keluar (FIFO) atau urutan yang terakhir masuk maka terakhir pula keluarnya (LILO).
+   
+2. Fungsi utama queue meliputi EnQueue untuk menambahkan elemen di ujung belakang dan DeQueue untuk menghapus elemen di ujung depan. Dengan demikian, queue memberikan cara efisien untuk mengelola data berurutan dalam berbagai konteks.
 
 ## Referensi
 [1] Erkamim, E., Abdurrohim, I., Yuliyanti, S., Karim, R., Rahman, A., Admira, T. M. A., & Ridwan, A. (2024). Buku Ajar Algoritma dan Struktur Data. PT. Sonpedia Publishing Indonesia.

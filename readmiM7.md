@@ -242,6 +242,7 @@ int main() {
 Deskripsi program:
 
 #### Full code Screenshot:
+![Screenshot 2024-05-14 205046](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/6351b690-48a4-4a1d-8e14-8a00f5c0dad0)
 
 ### 2. [Dari nomor 1 buatlah konsep antri dengan atribut Nama mahasiswa dan NIM Mahasiswa]
 
@@ -358,8 +359,7 @@ int main() {
 Deskripsi program:
 
 #### Full code Screenshot:
-
-
+![Screenshot 2024-05-14 205236](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/72fafc92-3640-43b7-97df-fc7c7ec303e6)
 
 ## Kesimpulan
 1. Queue atau antrian adalah struktur data yang mengutamakan urutan penyisipan dan penghapusan elemen, dengan memastikan urutan pertama masuk adalah yang pertama keluar (FIFO) atau urutan yang terakhir masuk maka terakhir pula keluarnya (LILO).

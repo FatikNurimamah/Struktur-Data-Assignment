@@ -239,7 +239,7 @@ int main() {
 #### Output:
 ![Screenshot 2024-05-10 212837](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/af4ac4ed-0e5a-42a1-b436-e80317d513c4)
 
-Deskripsi program:
+Deskripsi program: Program di atas adalah contoh implementasi struktur data antrian (queue) menggunakan linked list dalam bahasa C++. Kelas Antrian memiliki fungsi untuk menambah dan menghapus elemen, serta menampilkan jumlah dan isi antrian. Pada fungsi main(), operasi dasar antrian seperti penambahan, penghapusan, dan penampilan elemen digunakan sebagai contoh penggunaan struktur data tersebut.
 
 #### Full code Screenshot:
 ![Screenshot 2024-05-14 205046](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/6351b690-48a4-4a1d-8e14-8a00f5c0dad0)

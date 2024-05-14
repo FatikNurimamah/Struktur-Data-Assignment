@@ -11,6 +11,8 @@ Berikut merupakan visualisasi dari Queue atau antrian[1]:
 
 ![Screenshot 2024-05-10 215824](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/bf8e67a2-7cef-4713-b8dd-e0e826ef510d)
 
+Pada gambar tersebut menunjukan 5 elemen (A,B,C,D,E) dimasukkan secara berturut-turut dari belakang[1]. Maka Elemen A yang merupakan elemen pertama masuk sehingga menempati posisi paling depan[1], Elemen E yang merupakan elemen terakhir masuk sehingga elemen E menempati posisi paling belakang[1].
+
 
 Operasi utama pada Queue[2]:
 1. EnQueue: Menyisipkan elemen di akhir antrian[2].
@@ -134,12 +136,108 @@ Deskripsi program: Program tersebut merupakan contoh sederhana penggunaan strukt
 #include <iostream>
 using namespace std;
 
+// Fatik Nurimamah
+// 2311102190
+
+// Node untuk merepresentasikan elemen dalam linked list
+struct Node {
+    string data;
+    Node* next;
+};
+
+class Antrian {
+private:
+    Node* depan; // Node depan (pertama) dalam antrian
+    Node* belakang; // Node belakang (terakhir) dalam antrian
+    int ukuran; // Ukuran antrian (jumlah elemen)
+
+public:
+    // Konstruktor untuk menginisialisasi antrian
+    Antrian() {
+        depan = nullptr;
+        belakang = nullptr;
+        ukuran = 0;
+    }
+
+    // Untuk mengecek apakah antrian kosong
+    bool kosong() {
+        return depan == nullptr;
+    }
+
+    // Untuk menambahkan elemen ke belakang antrian
+    void tambahkanAntrian(string data) {
+        Node* simpulBaru = new Node();
+        simpulBaru->data = data;
+        simpulBaru->next = nullptr;
+        if (kosong()) {
+            depan = simpulBaru;
+            belakang = simpulBaru;
+        } else {
+            belakang->next = simpulBaru;
+            belakang = simpulBaru;
+        }
+        ukuran++;
+    }
+
+    // Untuk menghapus elemen dari depan antrian
+    void kurangiAntrian() {
+        if (kosong()) {
+            cout << "Antrian kosong" << endl;
+            return;
+        }
+        Node* temp = depan;
+        depan = depan->next;
+        delete temp;
+        ukuran--;
+    }
+
+    // Untuk menampilkan seluruh elemen dalam antrian
+    void tampilkanAntrian() {
+        if (kosong()) {
+            cout << "\nAntrian kosong" << endl;
+            return;
+        }
+        cout << "\nData antrian teller:" << endl;
+        Node* saatIni = depan;
+        int i = 1;
+        while (saatIni != nullptr) {
+            cout << i << ". " << saatIni->data << endl;
+            saatIni = saatIni->next;
+            i++;
+        }
+    }
+
+    // Untuk mendapatkan jumlah elemen dalam antrian
+    int hitungAntrian() {
+        return ukuran;
+    }
+
+    // Untuk menghapus semua elemen dalam antrian
+    void hapusAntrian() {
+        while (!kosong()) {
+            kurangiAntrian();
+        }
+    }
+};
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    Antrian antrianTeller;
+    antrianTeller.tambahkanAntrian("Andi");
+    antrianTeller.tambahkanAntrian("Maya");
+    antrianTeller.tampilkanAntrian();
+    cout << "Jumlah antrian = " << antrianTeller.hitungAntrian() << endl;
+    antrianTeller.kurangiAntrian();
+    antrianTeller.tampilkanAntrian();
+    cout << "Jumlah antrian = " << antrianTeller.hitungAntrian() << endl;
+    antrianTeller.hapusAntrian();
+    antrianTeller.tampilkanAntrian();
+    cout << "Jumlah antrian = " << antrianTeller.hitungAntrian() << endl;
     return 0;
 }
+
 ```
 #### Output:
+![Screenshot 2024-05-10 212837](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/af4ac4ed-0e5a-42a1-b436-e80317d513c4)
 
 Deskripsi program:
 
@@ -151,12 +249,111 @@ Deskripsi program:
 #include <iostream>
 using namespace std;
 
+// Fatik Nurimamah
+// 2311102190
+
+// Node untuk merepresentasikan elemen dalam linked list
+struct Node {
+    string nama;
+    string nim;
+    Node* next;
+};
+
+class AntrianMahasiswa {
+private:
+    Node* depan; // Node depan (pertama) dalam antrian
+    Node* belakang; // Node belakang (terakhir) dalam antrian
+    int ukuran; // Ukuran antrian (jumlah elemen)
+
+public:
+    // Konstruktor untuk menginisialisasi antrian
+    AntrianMahasiswa() {
+        depan = nullptr;
+        belakang = nullptr;
+        ukuran = 0;
+    }
+
+    // Untuk mengecek apakah antrian kosong
+    bool kosong() {
+        return depan == nullptr;
+    }
+
+    // Untuk menambahkan elemen ke belakang antrian
+   void tambahkanAntrian(string nama, string nim) {
+        Node* simpulBaru = new Node();
+        simpulBaru->nama = nama;
+        simpulBaru->nim = nim;
+        simpulBaru->next = nullptr;
+        if (kosong()) {
+            depan = simpulBaru;
+            belakang = simpulBaru;
+        } else {
+            belakang->next = simpulBaru;
+            belakang = simpulBaru;
+        }
+        ukuran++;
+    }
+
+    // Untuk menghapus elemen dari depan antrian
+    void kurangiAntrian() {
+        if (kosong()) {
+            cout << "Antrian kosong" << endl;
+            return;
+        }
+        Node* temp = depan;
+        depan = depan->next;
+        delete temp;
+        ukuran--;
+    }
+
+    // Untuk menampilkan seluruh elemen dalam antrian
+    void tampilkanAntrian() {
+        if (kosong()) {
+            cout << "\nAntrian kosong" << endl;
+            return;
+        }
+        cout << "\nData antrian mahasiswa:" << endl;
+        Node* saatIni = depan;
+        int i = 1;
+        while (saatIni != nullptr) {
+            cout << i << ". Nama: " << saatIni->nama << ", NIM: " << saatIni->nim <<endl;
+            saatIni = saatIni->next;
+            i++;
+        }
+    }
+
+    // Untuk mendapatkan jumlah elemen dalam antrian
+    int hitungAntrian() {
+        return ukuran;
+    }
+
+    // Untuk menghapus semua elemen dalam antrian
+    void hapusAntrian() {
+        while (!kosong()) {
+            kurangiAntrian();
+        }
+    }
+};
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    AntrianMahasiswa antrian;
+    antrian.tambahkanAntrian("Andi", "12345");
+    antrian.tambahkanAntrian("Maya", "67890");
+    antrian.tampilkanAntrian();
+    cout << "Jumlah antrian = " << antrian.hitungAntrian() << endl;
+    antrian.kurangiAntrian();
+    antrian.tampilkanAntrian();
+    cout << "Jumlah antrian = " << antrian.hitungAntrian() << endl;
+    antrian.hapusAntrian();
+    antrian.tampilkanAntrian();
+    cout << "Jumlah antrian = " << antrian.hitungAntrian() << endl;
     return 0;
 }
+
 ```
 #### Output:
+![Screenshot 2024-05-14 195854](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/a78a948e-3cd4-44f0-917d-2ca19de85c96)
+
 
 Deskripsi program:
 

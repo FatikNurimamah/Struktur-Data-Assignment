@@ -1,7 +1,7 @@
 # <h1 align="center">Laporan Praktikum Modul QUEUE</h1>
 <p align="center">Fatik Nurimamah (2311102190)</p>
 
-## Dasar Teori
+## Dasar Teori 
 
 PENJELASAN QUEUE
 

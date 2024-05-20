@@ -330,7 +330,7 @@ int main() {
 #### Output:
 ![Screenshot 2024-05-20 223816](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/248febb3-29d9-48b0-8553-7e80e99e93a5)
 
-Deskripsi Program: 
+Deskripsi Program: Program tersebut merupakan contoh sederhana dari penerapan metode sequential search dalam bahasa pemrograman C++. Program tersebut digunakan untuk menghitung jumlah kemunculan angka 4 dalam sebuah array menggunakan algoritma sequential search. Dengan menggunakan sebuah fungsi, program melakukan iterasi melalui setiap elemen dalam array untuk memeriksa apakah elemen tersebut sama dengan angka 4. Setiap kali angka 4 ditemukan, jumlahnya akan bertambah satu. Setelah penelusuran selesai, program menghasilkan jumlah total kemunculan angka 4 dalam array. Output program mencakup tampilan data array awal serta jumlah angka 4 yang terhitung. 
 
 #### Full code Screenshot:
 ![Screenshot 2024-05-20 223909](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/25ce5faa-dacd-4102-b730-e85265fdeb97)

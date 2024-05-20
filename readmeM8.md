@@ -306,4 +306,5 @@ Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran
 
 ## Referensi
 [1] Religia, Yoga. "Analisis Algoritma Sequential Search Dan Binary Search Pada Big Data: Analysis Of Sequential Search And Binary Search Algorithm In Big Data." Pelita Teknologi 14.1 (2019): 74-79.
+
 [2] Imamah, Nurul. "Perbandingan Algoritma Sequential Search Dan Algoritma Binary Search Pada Aplikasi Kamus Bahasa Indonesia Menggunakan Php Dan Jquery." COMPUTING| Jurnal Informatika 8.01 (2021): 1-6.

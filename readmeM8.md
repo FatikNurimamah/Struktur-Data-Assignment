@@ -230,7 +230,7 @@ int main() {
 #### Output:
 ![Screenshot 2024-05-20 214057](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/45ba40d7-1f36-49ef-967a-540fc5c648ae)
 
-Deskripsi Program:
+Deskripsi Program: Program tersebut merupakan implementasi binary search dalam C++. Program meminta pengguna untuk memasukkan sebuah kalimat dan kemudian program menghapus semua spasi dari kalimat tersebut. Kalimat kemudian diubah menjadi array karakter dan diurutkan. Pengguna diminta untuk memasukkan sebuah huruf yang ingin dicari dalam kalimat. Program menggunakan pencarian biner untuk mencari huruf tersebut dalam array yang sudah diurutkan. Hasilnya, program memberi tahu pengguna apakah huruf tersebut ditemukan dalam kalimat atau tidak. 
 
 #### Full code Screenshot:
 ![Screenshot 2024-05-20 214308](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/d88dcd84-7bbc-4c6a-aba7-10fb92b25408)

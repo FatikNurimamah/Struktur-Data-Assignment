@@ -275,7 +275,7 @@ int main() {
 #### Output:
 ![Screenshot 2024-05-20 220945](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/44e5e99f-96b3-452b-9c0f-8ff5d1d2e920)
 
-Deskripsi Program: 
+Deskripsi Program: Program ini menghitung jumlah huruf vokal dalam sebuah kalimat yang dimasukkan oleh pengguna. Fungsi `countVokal` mengambil sebuah string sebagai parameter dan menghitung jumlah huruf vokal di dalamnya dengan memeriksa setiap karakter apakah termasuk dalam kumpulan huruf vokal "A, I, U, E, O, a, i, u, e, o". Setelah jumlah vokal dihitung, program menampilkan hasilnya. Di dalam fungsi `main`, pengguna diminta untuk memasukkan sebuah kalimat, kemudian program menghitung dan menampilkan jumlah huruf vokal dalam kalimat tersebut.
 
 #### Full code Screenshot:
 ![Screenshot 2024-05-20 221148](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/35b9abca-d8fd-44bf-8713-62e02a164a24)

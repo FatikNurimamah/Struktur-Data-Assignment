@@ -244,6 +244,9 @@ Deskripsi Program: Program tersebut merupakan implementasi binary search dalam C
 
 using namespace std;
 
+// Fatik Nurimamah
+// 2311102190
+
 // Fungsi untuk menghitung jumlah huruf vokal dalam sebuah kalimat
 int countVokal(const string& kalimat) {
     int vokalCount = 0;
@@ -278,8 +281,7 @@ int main() {
 Deskripsi Program: Program ini menghitung jumlah huruf vokal dalam sebuah kalimat yang dimasukkan oleh pengguna. Fungsi `countVokal` mengambil sebuah string sebagai parameter dan menghitung jumlah huruf vokal di dalamnya dengan memeriksa setiap karakter apakah termasuk dalam kumpulan huruf vokal "A, I, U, E, O, a, i, u, e, o". Setelah jumlah vokal dihitung, program menampilkan hasilnya. Di dalam fungsi `main`, pengguna diminta untuk memasukkan sebuah kalimat, kemudian program menghitung dan menampilkan jumlah huruf vokal dalam kalimat tersebut.
 
 #### Full code Screenshot:
-![Screenshot 2024-05-20 221148](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/35b9abca-d8fd-44bf-8713-62e02a164a24)
-
+![Screenshot 2024-05-20 222749](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/b539d691-feed-4fd5-9aa8-957576de1b25)
 
 ### 3. [Diketahui data = 9, 4, 1, 4, 7, 10, 5, 4, 12, 4. Hitunglah berapa banyak angka 4 dengan menggunakan algoritma Sequential Search!]
 

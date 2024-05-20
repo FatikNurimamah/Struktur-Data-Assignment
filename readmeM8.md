@@ -336,7 +336,9 @@ Deskripsi Program: Program tersebut merupakan contoh sederhana dari penerapan me
 ![Screenshot 2024-05-20 223909](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/25ce5faa-dacd-4102-b730-e85265fdeb97)
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+1. Sequential Search: Metode pencarian data dalam array 1 dimensi tanpa pengurutan terlebih dahulu. Prosesnya adalah membandingkan data yang dicari dengan setiap elemen array satu per satu sampai data tersebut ditemukan atau tidak.
+
+2. Binary Search: Metode pencarian data pada array yang sudah terurut. Array dibagi menjadi dua bagian dan pencarian dilakukan dengan membandingkan data dengan nilai tengahnya terlebih dahulu. Lebih efisien daripada Sequential Search, tapi hanya berlaku untuk array yang sudah terurut.
 
 ## Referensi
 [1] Religia, Yoga. "Analisis Algoritma Sequential Search Dan Binary Search Pada Big Data: Analysis Of Sequential Search And Binary Search Algorithm In Big Data." Pelita Teknologi 14.1 (2019): 74-79.

@@ -164,12 +164,7 @@ Deskripsi Program: Program ini adalah implementasi binary search dalam bahasa C+
 ### 1. [Buatlah sebuah program untuk mencari sebuah huruf pada sebuah kalimat yang sudah di input dengan menggunakan Binary Search!]
 
 ```C++
-#include <iostream>
-using namespace std;
 
-int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
-    return 0;
 }
 ```
 #### Output:
@@ -183,19 +178,75 @@ Deskripsi Program:
 
 ```C++
 #include <iostream>
+#include <algorithm>
+#include <string>
+#include <cstring>
+
 using namespace std;
 
+// Fatik Nurimamah
+// 2311102190
+
+// Fungsi untuk melakukan binary search pada array
+bool binarySearch(char arr[], int size, char key) {
+    int low = 0, high = size - 1;
+    while (low <= high) {
+        int mid = (low + high) / 2;
+        if (arr[mid] == key) {
+            return true;
+        } else if (arr[mid] < key) {
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+    return false;
+}
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    // Meminta user untuk memasukkan kalimat
+    string kalimat;
+    cout << "Masukkan sebuah kalimat: ";
+    getline(cin, kalimat);
+
+    // Menghapus spasi dari kalimat
+    kalimat.erase(remove(kalimat.begin(), kalimat.end(), ' '), kalimat.end());
+
+    // Mengubah kalimat menjadi array 
+    int size = kalimat.size();
+    char* charArray = new char[size + 1];
+    strcpy(charArray, kalimat.c_str());
+
+    // Mengurutkan array 
+    sort(charArray, charArray + size);
+
+    // Meminta user untuk memasukkan huruf yang ingin dicari
+    char key;
+    cout << "Masukkan huruf yang ingin dicari: ";
+    cin >> key;
+
+    // Mencari huruf menggunakan binary search
+    bool ketemu = binarySearch(charArray, size, key);
+
+    if (ketemu) {
+        cout << "Huruf '" << key << "' ditemukan dalam kalimat." << endl;
+    } else {
+        cout << "Huruf '" << key << "' tidak ditemukan dalam kalimat." << endl;
+    }
+
+    // Menghapus array dinamis untuk menghindari memory leak
+    delete[] charArray;
+
     return 0;
 }
 ```
 #### Output:
-
+![Screenshot 2024-05-20 214057](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/45ba40d7-1f36-49ef-967a-540fc5c648ae)
 
 Deskripsi Program: 
 
 #### Full code Screenshot:
+![Screenshot 2024-05-20 214308](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/d88dcd84-7bbc-4c6a-aba7-10fb92b25408)
 
 
 ### 3. [Diketahui data = 9, 4, 1, 4, 7, 10, 5, 4, 12, 4. Hitunglah berapa banyak angka 4 dengan menggunakan algoritma Sequential Search!]

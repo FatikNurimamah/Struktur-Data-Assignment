@@ -157,11 +157,11 @@ return 0;
 #### Output:
 ![Screenshot 2024-05-20 205734](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/d8a416d2-ab04-4442-8363-464337ca8fca)
 
-Deskripsi Program: 
+Deskripsi Program: Program ini adalah implementasi binary search dalam bahasa C++. Dimulai dengan menampilkan sebuah array berisi 7 angka yang telah diinisialisasi, program kemudian meminta pengguna untuk memasukkan angka yang ingin dicari. Setelah itu, program mengurutkan array menggunakan algoritma selection sort. Dengan array yang sudah diurutkan, program melakukan pencarian biner untuk menemukan angka yang dimasukkan oleh pengguna. Jika angka tersebut ditemukan, program menampilkan indeks tempat angka itu berada; jika tidak ditemukan, program akan memberitahukan bahwa angka tersebut tidak ada dalam array. Program ini juga menampilkan array sebelum dan sesudah diurutkan untuk memberikan visualisasi perubahan data kepada pengguna.
 
 ## Unguided 
 
-### 1. [Soal]
+### 1. [Buatlah sebuah program untuk mencari sebuah huruf pada sebuah kalimat yang sudah di input dengan menggunakan Binary Search!]
 
 ```C++
 #include <iostream>
@@ -173,12 +173,49 @@ int main() {
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Deskripsi Program:
 
 #### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
+
+
+### 2. [Buatlah sebuah program yang dapat menghitung banyaknya huruf vocal dalam sebuah kalimat!]
+
+```C++
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "ini adalah file code unguided praktikan" << endl;
+    return 0;
+}
+```
+#### Output:
+
+
+Deskripsi Program: 
+
+#### Full code Screenshot:
+
+
+### 3. [Diketahui data = 9, 4, 1, 4, 7, 10, 5, 4, 12, 4. Hitunglah berapa banyak angka 4 dengan menggunakan algoritma Sequential Search!]
+
+```C++
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "ini adalah file code unguided praktikan" << endl;
+    return 0;
+}
+```
+#### Output:
+
+
+Deskripsi Program: 
+
+#### Full code Screenshot:
+
 
 
 ## Kesimpulan

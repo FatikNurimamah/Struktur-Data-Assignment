@@ -164,19 +164,6 @@ Deskripsi Program: Program ini adalah implementasi binary search dalam bahasa C+
 ### 1. [Buatlah sebuah program untuk mencari sebuah huruf pada sebuah kalimat yang sudah di input dengan menggunakan Binary Search!]
 
 ```C++
-
-}
-```
-#### Output:
-
-Deskripsi Program:
-
-#### Full code Screenshot:
-
-
-### 2. [Buatlah sebuah program yang dapat menghitung banyaknya huruf vocal dalam sebuah kalimat!]
-
-```C++
 #include <iostream>
 #include <algorithm>
 #include <string>
@@ -242,6 +229,20 @@ int main() {
 ```
 #### Output:
 ![Screenshot 2024-05-20 214057](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/45ba40d7-1f36-49ef-967a-540fc5c648ae)
+
+Deskripsi Program:
+
+#### Full code Screenshot:
+![Screenshot 2024-05-20 214308](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/d88dcd84-7bbc-4c6a-aba7-10fb92b25408)
+
+
+### 2. [Buatlah sebuah program yang dapat menghitung banyaknya huruf vocal dalam sebuah kalimat!]
+
+```C++
+
+
+```
+#### Output:
 
 Deskripsi Program: 
 

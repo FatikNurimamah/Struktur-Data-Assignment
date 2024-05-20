@@ -239,15 +239,46 @@ Deskripsi Program: Program tersebut merupakan implementasi binary search dalam C
 ### 2. [Buatlah sebuah program yang dapat menghitung banyaknya huruf vocal dalam sebuah kalimat!]
 
 ```C++
+#include <iostream>
+#include <string>
 
+using namespace std;
 
+// Fungsi untuk menghitung jumlah huruf vokal dalam sebuah kalimat
+int countVokal(const string& kalimat) {
+    int vokalCount = 0;
+    // Daftar huruf vokal
+    string vokal = "A,I,U,E,O,a,i,u,e,o";
+    for (char ch : kalimat) {
+        if (vokal.find(ch) != string::npos) {
+            vokalCount++;
+        }
+    }
+    return vokalCount;
+}
+
+int main() {
+    // Meminta pengguna untuk memasukkan kalimat
+    string kalimat;
+    cout << "Masukkan sebuah kalimat: ";
+    getline(cin, kalimat);
+
+    // Menghitung jumlah huruf vokal dalam kalimat
+    int vokalCount = countVokal(kalimat);
+
+    // Menampilkan hasilnya
+    cout << "Jumlah huruf vokal dalam kalimat \"" << kalimat << "\" adalah : " << vokalCount << endl;
+
+    return 0;
+}
 ```
 #### Output:
+![Screenshot 2024-05-20 220945](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/44e5e99f-96b3-452b-9c0f-8ff5d1d2e920)
 
 Deskripsi Program: 
 
 #### Full code Screenshot:
-![Screenshot 2024-05-20 214308](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/d88dcd84-7bbc-4c6a-aba7-10fb92b25408)
+![Screenshot 2024-05-20 221148](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/35b9abca-d8fd-44bf-8713-62e02a164a24)
 
 
 ### 3. [Diketahui data = 9, 4, 1, 4, 7, 10, 5, 4, 12, 4. Hitunglah berapa banyak angka 4 dengan menggunakan algoritma Sequential Search!]

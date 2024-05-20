@@ -289,19 +289,51 @@ Deskripsi Program: Program ini menghitung jumlah huruf vokal dalam sebuah kalima
 #include <iostream>
 using namespace std;
 
+// Fatik Nurimamah
+// 2311102190
+
+// Fungsi untuk menghitung jumlah angka 4 dalam array menggunakan sequential search
+int countAngka(int data[], int size) {
+    int count = 0;
+
+    // Melakukan iterasi melalui setiap elemen dalam array
+    for (int i = 0; i < size; i++) {
+        if (data[i] == 4) {
+            count++;
+        }
+    }
+
+    return count;  // Kembalikan jumlah angka 4 yang ditemukan
+}
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    // Array data yang diberikan
+    int data[] = {9, 4, 1, 4, 7, 10, 5, 4, 12, 4};
+    int size = sizeof(data) / sizeof(data[0]);
+
+    // Menampilkan data array
+    cout << "Data Array: ";
+    for (int i = 0; i < size; i++) {
+        cout << data[i] << " ";
+    }
+    cout << endl;
+
+    // Menghitung jumlah angka 4 dalam array
+    int count = countAngka(data, size);
+
+    // Menampilkan hasil perhitungan
+    cout << "Jumlah angka 4 dalam array di atas adalah : " << count << endl;
+
     return 0;
 }
 ```
 #### Output:
-
+![Screenshot 2024-05-20 223816](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/248febb3-29d9-48b0-8553-7e80e99e93a5)
 
 Deskripsi Program: 
 
 #### Full code Screenshot:
-
-
+![Screenshot 2024-05-20 223909](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/25ce5faa-dacd-4102-b730-e85265fdeb97)
 
 ## Kesimpulan
 Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].

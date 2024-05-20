@@ -3,7 +3,7 @@
 <p align="center">Fatik Nurimamah (2311102190) </p>
 
 ## Dasar Teori
-
+ 
 PENJELASAN ALGORITMA SEARCHING
 
 1. Sequential Search

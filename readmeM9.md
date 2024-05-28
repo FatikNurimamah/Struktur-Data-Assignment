@@ -40,20 +40,64 @@
 ### 1. [Program Graph]
 
 ```C++
+// Program Graph
+
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
-int main() {
-    cout << "ini adalah file code guided praktikan" << endl;
-    return 0;
+string simpul[7] =
+{
+    "Ciamis",
+    "Bandung",
+    "Bekasi",
+    "tasikmalaya",
+    "Cianjur",
+    "Purwokerto",
+    "Yogyakarta"
+};
+
+int busur[7][7] =
+{
+    {0, 7, 8, 0, 0, 0, 0},
+    {0, 0, 5, 0, 0, 15, 0},
+    {0, 6, 0, 0, 5, 0, 0},
+    {0, 5, 0, 0, 2, 4, 0},
+    {23, 0, 0, 10, 0, 0, 8},
+    {0, 0, 0, 0, 7, 0, 3},
+    {0, 0, 0, 0, 9, 4, 0}
+};
+
+void tampilGraph()
+{
+    for (int baris = 0; baris <7; baris ++)
+    {
+        cout <<" " << setiosflags (ios::left) << setw (15) << simpul [baris] << " : ";
+        for (int kolom = 0; kolom<7; kolom++)
+        {
+            if (busur[baris][kolom]!=0)
+            {
+                cout << " " << simpul[kolom]<< "(" << busur[baris][kolom] << ")";
+            }
+        }
+        cout << endl;
+    }
 }
+
+int main()
+{
+    tampilGraph();
+
+return 0;
+}
+
 ```
 #### Output:
+![Screenshot 2024-05-28 204051](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/30431a76-4f76-4e7a-aa52-ee291e5417b7)
 
+Deskripsi Program: Program tersebut menggambarkan sebuah graph yang terdiri dari tujuh simpul yang mewakili kota-kota di Indonesia. Setiap kota dihubungkan dengan kota lainnya melalui jalur dengan bobot tertentu, yang merepresentasikan jarak atau keterhubungan antara kota-kota tersebut. Implementasi menggunakan dua array: satu untuk menyimpan nama-nama kota dan satu untuk menyimpan bobot jalur antara kota-kota dalam matriks dua dimensi. Fungsi `tampilGraph` digunakan untuk menampilkan hubungan antara kota-kota dengan bobot jalurnya. Program ini kemudian dieksekusi dalam fungsi `main`.
 
-Deskripsi Program: 
-
-### 2. [Nama Topik]
+### 2. []
 
 ```C++
 #include <iostream>
@@ -68,6 +112,7 @@ int main() {
 
 
 Deskripsi Program: 
+
 
 ## Unguided 
 

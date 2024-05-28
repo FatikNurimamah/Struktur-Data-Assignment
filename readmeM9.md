@@ -571,7 +571,7 @@ int main()
 
 ```
 #### Output:
-![Screenshot 2024-05-28 220509](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/7bc21bf7-bb0a-4cd7-bb45-f8d31ab84e0b)
+![Screenshot 2024-05-28 222316](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/435f4cda-8709-49f3-8689-e5d7e4d85462)
 
 Deskripsi Program: Program tersebut digunakan oleh pengguna untuk menentukan jumlah simpul dalam suatu graf dan mengisi bobot antar simpul dalam bentuk matriks. Setelah pengguna memberikan input, program akan menampilkan matriks bobot antar simpul berdasarkan informasi yang dimasukkan. Alur program dimulai dengan penggunaan jumlah simpul yang dimasukkan, kemudian nama-nama simpul dimasukkan satu per satu melalui fungsi `isiSimpul_Fatik_2311102190()`. Selanjutnya, pengguna diminta untuk memberikan bobot antar simpul menggunakan prompt yang sesuai. Setelah semua informasi terkumpul, program akan mencetak matriks bobot antar simpul, termasuk header untuk nama-nama simpul dan bobot-bobot antar simpul.
 

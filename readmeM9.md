@@ -1262,8 +1262,31 @@ int main()
 
 ```
 #### Output:
+![Screenshot 2024-05-28 233602](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/a760e045-81dc-4951-8efd-132df741d6fa)
 
+![Screenshot 2024-05-28 233637](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/1ab2efaa-7f32-4648-918b-b4db5c485672)
 
+![Screenshot 2024-05-28 233858](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/91adaf6a-8bc5-45f2-834d-9bd22a7278ed)
+
+![Screenshot 2024-05-28 234358](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/5b6a59b4-a053-4812-ba93-66cd302b6173)
+
+![Screenshot 2024-05-28 234426](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/b2ae1315-148a-440b-8636-a1e93d4857c6)
+
+![Screenshot 2024-05-28 234520](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/cd7a2159-0e2d-436f-8e95-5dc3a937e3d5)
+
+![Screenshot 2024-05-28 234558](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/f849773a-5834-4b43-bc85-6ec349a88852)
+
+![Screenshot 2024-05-28 234650](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/497a96e8-26da-4d04-907e-36d43123870d)
+
+![Screenshot 2024-05-28 234716](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/0fe373c4-a853-42ab-9661-53ae023728bd)
+
+![Screenshot 2024-05-28 234716](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/964c5889-a416-47ba-a59d-dfee021bb03e)
+
+![Screenshot 2024-05-28 234843](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/caa2910e-c8b2-47d1-bbd3-da4ef5cc06a1)
+
+![Screenshot 2024-05-28 234918](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/7a416c12-fd06-44f9-9e0d-9d3607c1e23b)
+
+![Screenshot 2024-05-28 234939](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/37ff965b-d886-4503-878b-c83bc8a2ba30)
 
 Deskripsi Program: 
 

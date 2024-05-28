@@ -1280,7 +1280,7 @@ int main()
 
 ![Screenshot 2024-05-28 234716](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/0fe373c4-a853-42ab-9661-53ae023728bd)
 
-![Screenshot 2024-05-28 234716](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/964c5889-a416-47ba-a59d-dfee021bb03e)
+![Screenshot 2024-05-28 234755](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/dde6800e-e9cb-4d07-bb40-95f4a845dc1e)
 
 ![Screenshot 2024-05-28 234843](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/caa2910e-c8b2-47d1-bbd3-da4ef5cc06a1)
 

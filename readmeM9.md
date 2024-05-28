@@ -1288,7 +1288,7 @@ int main()
 
 ![Screenshot 2024-05-28 234939](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/37ff965b-d886-4503-878b-c83bc8a2ba30)
 
-Deskripsi Program: 
+Deskripsi Program: Program ini adalah implementasi dari struktur data tree dalam bahasa C++. Program ini terdapat berbagai fungsi yaitu: membuat root, menambahkan child kiri dan kanan, memperbarui data node, menampilkan data node, mencari node, melakukan traversal preorder, inorder, dan postorder, menghapus subtree, menghapus seluruh tree, serta menampilkan karakteristik tree seperti ukuran dan tinggi, dan menampilkan semua keturunan dari node tertentu. Program ini memiliki banyak menu yang dapat digunakan oleh pengguna untuk memilih operasi yang diinginkan. Hubungan antar node dikelola dengan pointer dan rekursi digunakan untuk traversal dan penghapusan subtree.
 
 ## Kesimpulan
 

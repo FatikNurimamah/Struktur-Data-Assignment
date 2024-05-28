@@ -577,6 +577,8 @@ Deskripsi Program: Program tersebut digunakan oleh pengguna untuk menentukan jum
 
 
 #### Full code Screenshot:
+![Screenshot 2024-05-28 221700](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/607d4bf0-c485-4b77-991f-fd1ca5b34462)
+
 
 ### 2. [Soal]
 

@@ -37,7 +37,7 @@
    12. Leaf: node-node dalam tree yang tak memiliki seccessor[2].
    13. Degree: banyaknya child  yang  dimiliki suatu node[2].
 
-   Berikut merupakan visualisasi dari tree[2]:
+   Berikut merupakan visualisasi dari tree[2]: 
    ![Screenshot 2024-05-28 212910](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/5d596896-f989-4f69-b54e-3b70696a14e2)
 
    Binary Tree adalah tree dengan syarat bahwa tiap node hanya boleh memiliki maksimal dua sub tree dan kedua sub tree tersebut harus terpisah[2]. Sesuai dengan definisi tersebut, maka tiap node dalam binary tree hanya boleh memiliki paling banyak dua child[2]. Berikut merupakan visualisasi dari binary tree[2]:

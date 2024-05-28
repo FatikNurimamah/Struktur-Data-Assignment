@@ -496,12 +496,84 @@ Deskripsi Program: Program tersebut merupakan implementasi binary tree dalam bah
 ![Screenshot 2024-05-28 213652](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/6632a479-26f8-42ca-82e5-854a29926edb)
 
 ```C++
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+//Fatik Nurimamah
+//2311102190
+
+// Fungsi untuk mengisi nama-nama simpul
+void isiSimpul_Fatik_2311102190(string simpul[], int jumlah_Simpul)
+{
+    string namaSimpul;
+    for (int i = 0; i < jumlah_Simpul; i++)
+    {
+        cout << "Simpul " << i + 1 << " : ";
+        cin >> namaSimpul;
+        simpul[i] = namaSimpul;
+    }
+    cout << endl;
+}
+
+int main()
+{
+    // Penginputan jumlah simpul oleh pengguna
+    int jumlah_Simpul;
+    cout << "Masukkan jumlah simpul : ";
+    cin >> jumlah_Simpul;
+
+    // Deklarasi array untuk menyimpan nama simpul dan matriks bobot
+    string simpul[jumlah_Simpul];
+    int bobotSimpul[jumlah_Simpul][jumlah_Simpul];
+
+    // Mengisi nama-nama simpul
+    isiSimpul_Fatik_2311102190(simpul, jumlah_Simpul);
+
+    cout << "Silahkan masukkan bobot antar simpul" << endl;
+
+    // Mengisi bobot antar simpul
+    for (int i = 0; i < jumlah_Simpul; i++)
+    {
+        for (int j = 0; j < jumlah_Simpul; j++)
+        {
+            cout << simpul[i] << " ---> " << simpul[j] << " = ";
+            cin >> bobotSimpul[i][j];
+        }
+        cout << endl;
+    }
+
+    cout << endl;
+
+    cout << "Matriks bobot antar simpul" << endl;
+    cout << setw(12) << "";
+
+    // Cetak header untuk nama-nama simpul
+    for (int i = 0; i < jumlah_Simpul; i++)
+    {
+        cout << setw(12) << simpul[i];
+    }
+    cout << endl;
+
+    // Cetak bobot setiap simpul
+    for (int i = 0; i < jumlah_Simpul; i++)
+    {
+        // Cetak kolom untuk nama simpul
+        cout << setw(12) << simpul[i];
+        for (int j = 0; j < jumlah_Simpul; j++)
+        {
+            cout << setw(12) << bobotSimpul[i][j];
+        }
+        cout << endl;
+    }
+}
 
 ```
 #### Output:
 ![Screenshot 2024-05-28 220509](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/7bc21bf7-bb0a-4cd7-bb45-f8d31ab84e0b)
 
-Deskripsi Program: Program tersebut digunakan oleh pengguna untuk menentukan jumlah simpul dalam suatu graf dan mengisi bobot antar simpul dalam bentuk matriks. Setelah pengguna memberikan input, program akan menampilkan matriks bobot antar simpul berdasarkan informasi yang dimasukkan. Alur program dimulai dengan penggunaan jumlah simpul yang dimasukkan, kemudian nama-nama simpul dimasukkan satu per satu melalui fungsi `isiSimpul_190()`. Selanjutnya, pengguna diminta untuk memberikan bobot antar simpul menggunakan prompt yang sesuai. Setelah semua informasi terkumpul, program akan mencetak matriks bobot antar simpul, termasuk header untuk nama-nama simpul dan bobot-bobot antar simpul.
+Deskripsi Program: Program tersebut digunakan oleh pengguna untuk menentukan jumlah simpul dalam suatu graf dan mengisi bobot antar simpul dalam bentuk matriks. Setelah pengguna memberikan input, program akan menampilkan matriks bobot antar simpul berdasarkan informasi yang dimasukkan. Alur program dimulai dengan penggunaan jumlah simpul yang dimasukkan, kemudian nama-nama simpul dimasukkan satu per satu melalui fungsi `isiSimpul_Fatik_2311102190()`. Selanjutnya, pengguna diminta untuk memberikan bobot antar simpul menggunakan prompt yang sesuai. Setelah semua informasi terkumpul, program akan mencetak matriks bobot antar simpul, termasuk header untuk nama-nama simpul dan bobot-bobot antar simpul.
 
 
 #### Full code Screenshot:

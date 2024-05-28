@@ -22,17 +22,7 @@
 
 3. Tree
 
-   Tree bisa didefinisikan sebagai kumpulan simpul/node dengan satu elemen khusus  yang  disebut  Root  dan  node lainnya terbagi menjadi himpunan-himpunan yang saling tak berhubungan satu sama lainnya (disebut subtree)[1]. Binary tree (Pohon Biner) adalah himpunan terbatas yang mungkin kosong atau terdiri dari  sebuah simpul yang disebut akar dan dua buah himpunan lain yang disebut sub pohon kiri (left) dan sub pohon kanan(right)[1].  Karakteristik pohon biner adalah setiap simpul paling banyak hanya memiliki dua buah anak dan mungkin tidak punya anak[1].
-   Visualisasi dari binary tree adalah sebagai berikut[1]:
-
-   ![Screenshot 2024-05-28 201833](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/c71a3caf-c83d-49c9-835e-3cd666fcc437)
-
-   Ketentuan Tree Root (akar) adalah node yang memiliki derajat keluar >=0 dan derajat masuk = 0[1].
-
-   1. Subtree/child adalah bagian salah satu node di bawah root sampai ke bawah[1].
-   2. Leaf (daun) adalah semua node yang  derajat  masuknya  1  dan derajat keluarnya 0[1].
-   3. Height (ketinggian) adalah level tertinggi dari tree ditambah 1[1].
-   4. Weight (bobot) adalah jumlah leaf (daun) pada tree[1].
+   
 
       
 ## Guided 
@@ -522,7 +512,8 @@ Deskripsi Program:
 
 1. Graph: Graph adalah struktur yang terdiri dari simpul (vertex) yang dihubungkan oleh sisi (edge), , digunakan untuk menggambarkan objek-objek dan hubungan antar objeknya. Graph dilambangkan sebagai G = (V, E), di mana V adalah kumpulan vertex atau simpul dan E adalah kumpulan edge atau sisi.
 
-2. Tree dan Binary Tree: Tree adalah struktur dengan satu titik utama yang disebut root dan kumpulan subtree yang tidak saling berhubungan. Binary tree adalah jenis tree di mana setiap titik memiliki maksimal dua anak. Karakteristik pentingnya meliputi root, subtree, leaf, height, dan weight.
-
+2. 
 ## Referensi
 [1] Safei, M. Rian. "PENGERTIAN STRUKTUR DATA NON LINIER." (2019).
+
+[2] HANDISHA, CICI. "Fakultas Komputer."

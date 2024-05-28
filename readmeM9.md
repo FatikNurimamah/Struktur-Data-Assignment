@@ -41,6 +41,8 @@
    ![Screenshot 2024-05-28 212910](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/5d596896-f989-4f69-b54e-3b70696a14e2)
 
    Binary Tree adalah tree dengan syarat bahwa tiap node hanya boleh memiliki maksimal dua sub tree dan kedua sub tree tersebut harus terpisah[2]. Sesuai dengan definisi tersebut, maka tiap node dalam binary tree hanya boleh memiliki paling banyak dua child[2]. Berikut merupakan visualisasi dari binary tree[2]:
+
+   
    ![Screenshot 2024-05-28 213359](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/c5629bce-c713-49f6-93fb-8896fba82db7)
 
    
@@ -490,7 +492,8 @@ Deskripsi Program: Program tersebut merupakan implementasi binary tree dalam bah
 
 ## Unguided 
 
-### 1. [Soal]
+### 1. [Buatlah program graph dengan menggunakan inputan user untuk menghitungjarak dari sebuah kota ke kota lainnya.Output Program} 
+![Screenshot 2024-05-28 213652](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/6632a479-26f8-42ca-82e5-854a29926edb)
 
 ```C++
 #include <iostream>

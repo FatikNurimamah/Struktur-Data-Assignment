@@ -20,7 +20,28 @@
 
    ![Screenshot 2024-05-28 200602](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/8003a21a-93fc-4532-8b79-c9f86e2441c5)
 
-3. Tree
+2. Tree
+
+   Tree  merupakan  salah  satu  bentuk  struktur  data tidak  linear yang  menggambarkan  hubungan  yang bersifat  hirarkis (hubungan  one  to  many)  antara elemen-elemen[2].Tree bisa didefinisikan sebagai kumpulan simpul/node dengan satu elemen khusus yang disebut Root dan node lainnya terbagi menjadi himpunan-himpunan yang saling tak berhubungan satu sama lainnya  (disebut  subtree)[2]. Berikut merupakan istilah-istilah umum dalam tree[2]:
+   1. Prodecessor: node yang berada diatas node tertentu[2].
+   2. Successor: node yang berada di bawah node tertentu[2].
+   3. Ancestor:  seluruh node yang terletak sebelum node tertentu dan terletak pada jalur yang sama[2].
+   4. Descendant: seluruh node yang terletak sesudah node tertentu dan terletak pada jalur yang sama[2].
+   5. Parent: predecssor satu level di atas suatu node[2].
+   6. Child: successor satu level di bawah suatu node[2].
+   7. Sibling: node-node yang memiliki parent yang sama dengan suatu node[2].
+   8. Subtree: bagian  dari  tree  yang  berupa suatu node beserta descendantnya dan memiliki semua karakteristik dari tree tersebut[2].
+   9. Size: banyaknya node dalam suatu tree[2].
+   10. Height: banyaknya tingkatan/level dalam suatu tree[2].
+   11. Root:  satu-satunya  node  khusus  dalam tree yang tak punya predecssor[2].
+   12. Leaf: node-node dalam tree yang tak memiliki seccessor[2].
+   13. Degree: banyaknya child  yang  dimiliki suatu node[2].
+
+   Berikut merupakan visualisasi dari tree[2]:
+   ![Screenshot 2024-05-28 212910](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/5d596896-f989-4f69-b54e-3b70696a14e2)
+
+   Binary Tree adalah tree dengan syarat bahwa tiap node hanya boleh memiliki maksimal dua sub tree dan kedua sub tree tersebut harus terpisah[2]. Sesuai dengan definisi tersebut, maka tiap node dalam binary tree hanya boleh memiliki paling banyak dua child[2]. Berikut merupakan visualisasi dari binary tree[2]:
+   ![Screenshot 2024-05-28 213359](https://github.com/FatikNurimamah/Struktur-Data-Assignment/assets/162486157/c5629bce-c713-49f6-93fb-8896fba82db7)
 
    
 

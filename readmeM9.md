@@ -536,7 +536,9 @@ Deskripsi Program:
 
 1. Graph: Graph adalah struktur yang terdiri dari simpul (vertex) yang dihubungkan oleh sisi (edge), , digunakan untuk menggambarkan objek-objek dan hubungan antar objeknya. Graph dilambangkan sebagai G = (V, E), di mana V adalah kumpulan vertex atau simpul dan E adalah kumpulan edge atau sisi.
 
-2. 
+2. Tree merupakan struktur data yang hierarkis, terdiri dari simpul-simpul dengan satu simpul istimewa sebagai root. Terdapat berbagai konsep dalam tree, seperti predecessor, successor, ancestor, descendant, parent, child, sibling, subtree, size, height, root, leaf, dan degree. Binary tree adalah bentuk khusus dari tree di mana setiap node memiliki paling banyak dua child yang terpisah, memfasilitasi representasi data dengan hierarki yang jelas.
+
+   
 ## Referensi
 [1] Safei, M. Rian. "PENGERTIAN STRUKTUR DATA NON LINIER." (2019).
 
